@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <%- partial('_partial/head') %>
+</head>
+
+<body style="background:#fafdff;">
+    <%- partial('_partial/nav', {page}) %>
+    <div class="pt-3 mb-3 mx-auto container" style="min-height: calc(80vh - 370px)">
+        <!-- style="max-width: 800px;" -->
+        <div class="card">
+            <card class="card-header">
+                <h1 class="m-0 pr-3 text-blue" style="font-family:Microsoft YaHei">
+                    <%- page.title %>
+                </h1>
+                <div class="d-flex align-items-center my-3" style="font-size: 18px;font-family: ms;">
+                    <span class="iconfont icon-discount mr-2"></span>
+                    <% page.categories.forEach(function(categorie){ %>
+                    <a href="<%- categorie.path %>" class="mr-2 text-muted">
+                        <%- categorie.name %>
+                    </a>
+                    <% }); %>
+                    <span class="iconfont icon-calendar mr-2"></span>
+                    <span class="text-muted mr-2">
+                        <%- date(page.date, 'YYYY/MM/DD HH:ss') %>
+                    </span>
+                    <%- partial('_view/tag', {tags:page.tags}) %>
+                </div>
+            </card>
+            <hr class="m-0">
+            <div class="card-body article-content">
+                <div style="font-size: 16px;font-family:Microsoft YaHei;font-weight: 300">
+                    <%- page.more %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- partial('_partial/footer') %>
+</body>
+
+</html>

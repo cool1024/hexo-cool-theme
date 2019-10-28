@@ -1,0 +1,67 @@
+.cool-aside {
+    width: 38%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    height: 100%;
+    z-index: 3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .featured {
+        font-weight: 300;
+        font-family: 'Montserrat', 'Noto Serif SC', sans-serif;
+        font-size: 18px;
+        z-index: 2;
+        margin: auto;
+        margin-top: 25%;
+        width: 85%;
+
+        h2{
+            font-weight: 300;
+        }
+
+        .text-reset{
+            opacity: 0.8;
+        }
+    }
+
+    .avatar {
+        img {
+            border: 3px solid white;
+        }
+    }
+}
+
+.cool-main {
+    margin-left: 38%;
+    position: relative;
+    z-index: 4;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .cool-aside {
+        width: 100%;
+        position: relative;
+        z-index: 4;
+        height: 450px;
+    }
+
+    .cool-main {
+        margin-left: 0;
+    }
+}

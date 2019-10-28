@@ -1,0 +1,26 @@
+
+# About you
+cool_up:
+  name: Dream Country
+  description: 我喜欢唱，跳，rap还有篮球
+  avatar: /image/avatar.jpg
+  web_favicon: /favicon.ico
+
+# Navigation Menu
+cool_nav:
+  - { title: Home, action: / }
+  - { title: Articles, action: /articles }
+  - { title: Tag, action: /tags }
+
+# Photo Library
+cool_photo:
+  - /source/bilibili/photo.json
+  - /source/acfun/photo.json
+
+# Live2d
+cool_live2d: /source/bilibili
+
+# Concat
+cool_concat: 
+  - { text: bilibili, icon: bilibili, action: https://www.bilibili.com }
+  - { text: twitter, icon: twitter, action: https://twitter.com/Jian08581894 }

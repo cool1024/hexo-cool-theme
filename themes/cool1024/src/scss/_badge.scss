@@ -1,0 +1,21 @@
+@each $color, $value in $theme-colors {
+
+    .badge-#{$color}{
+        @extend .badge;
+        @extend .badge-pill;
+        background-color: rgba($value, 0.1);
+        border: 1px solid $value;
+        color: $value;
+        font-weight: 400;
+        font-size: 20px;
+        font-size: 15px;
+        color: $value;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover,&:focus{
+            background-color: rgba($value, 0.2) !important;
+            color: $value !important;
+        }
+    } 
+}
+  
