@@ -1,19 +1,19 @@
 .pager {
     a {
-        color: $blue;
+        color: color-yiq(rgba($color, 0.8));
+        background-color: rgba($color, 0.8);
         text-decoration: none !important;
         cursor: pointer;
-        background-color: #d1e7ff;
 
         &:hover {
-            background-color: $blue-tint;
-            color: white;
+            background-color: rgba($color, 0.5);
+            color: color-yiq(rgba($color, 0.5));
         }
     }
 
     span {
-        color: white;
-        background-color: $blue;
+        color: color-yiq($color);
+        background-color: $color;
     }
 
     .page-number, .space, .extend {
@@ -22,7 +22,7 @@
         font-size: 20px;
         width: 40px;
         text-align: center;
-        border: 1px solid #d1e7ff;
+        // border: 1px solid #d1e7ff;
 
         @extend .mx-2;
 

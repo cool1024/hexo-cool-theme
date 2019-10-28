@@ -1,6 +1,6 @@
 <% page.posts.each(function(post, i){ %>
-<%- partial('../_view/article-preview',{post: post}) %>
+<%- partial('../_view/article-item',{post: post, no: theme.index_generator.per_page * (page.current-1) + i + 1}) %>
 <% }) %>
-<div class="pager my-4">
+<div class="pager m-4">
     <%- paginator({total: page.total, current:page.current }) %>
 </div>

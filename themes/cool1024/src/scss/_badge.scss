@@ -3,6 +3,7 @@
     .badge-#{$color}{
         @extend .badge;
         @extend .badge-pill;
+        user-select: none;
         background-color: rgba($value, 0.1);
         border: 1px solid $value;
         color: $value;

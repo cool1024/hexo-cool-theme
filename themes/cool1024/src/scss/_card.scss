@@ -237,9 +237,13 @@
 }
 
 .card-page {
+    border-bottom: 1px solid rgba($color, 0.3);
+
     .title {
-        border-left: 4px solid $blue;
-        color: $blue;
+        border-left: 2px solid $color;
+        color: $color;
+        font-weight: 300;
+        font-size: 24px;
     }
 
     .subject {

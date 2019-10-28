@@ -18,6 +18,7 @@ $font-weight-bold: 500;
 // $table-head-color: $blue;
 // $table-border-width: 0;
 $table-border-color: #d1e7ff;
+
 // $table-striped-order: even;
 // $table-accent-bg: rgba($cyan, 0.05) !default;
 // $table-bg: rgba($gray-100, 0.1);
@@ -43,21 +44,16 @@ $input-focus-box-shadow: none;
 // 网格间距配置
 $grid-gutter-width: 15px !default;
 
+$dark: #444;
 $pink: #ff9acd;
 $pink-tint: #ffc8e4;
 $blue: #80b5ec;
 $blue-tint: #b4d6f9;
 $green: rgb(86, 212, 139);
 $yellow: rgb(245, 242, 70);
+$color: $dark;
 
-$theme-colors: (
- "pink": $pink,
- "pink-tint": $pink-tint,
- "blue": $blue, 
- "blue-tint": $blue-tint,
- "green": $green, 
- "yellow": $yellow
- );
+$theme-colors: ("main": $dark, "pink": $pink, "pink-tint": $pink-tint, "blue": $blue, "blue-tint": $blue-tint, "green": $green, "yellow": $yellow);
 
 @import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/root";
@@ -102,16 +98,16 @@ $theme-colors: (
 
 @import "node_modules/bootstrap/scss/print";
 
-
-
 @font-face {
     font-family: 'zkzt';
-    src: url('/font/zkzt.ttf');
+    src: url("/font/zkzt.ttf");
 }
+
 @font-face {
     font-family: 'ms';
-    src: url('/font/Muyao-Softbrush.ttf');
+    src: url("/font/Muyao-Softbrush.ttf");
 }
+
 @import "card";
 @import "badge";
 @import "base";
