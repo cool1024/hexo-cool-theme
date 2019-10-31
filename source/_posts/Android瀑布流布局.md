@@ -12,16 +12,17 @@ thumb: /image/picture.jpg
 
 # 相关类介绍
 
-### StaggeredGridLayoutManager
+## StaggeredGridLayoutManager
 
 交错网格布局管理器，它支持水平和垂直布局以及反向布局。在RecyclerView中使用这个布局管理器可以得到一个简单的瀑布流布局。[参考文档](https://developer.android.com/reference/androidx/recyclerview/widget/StaggeredGridLayoutManager)
 
-### RecyclerView.ItemDecoration
+## RecyclerView.ItemDecoration
 
 RecyclerView中的Item装饰类，类似给每个子视图加上相框，我们也可以根据具体需求给满足某些特定条件的视图加上特别的'装饰'。ItemDecoration通常被用于设置视图边界，绘制分割符。[参考文档](https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.ItemDecoration)
 
 # 一个简单的相册例子
-### PhotoPreviewFragment
+
+## PhotoPreviewFragment
 这是一个用于测试的Fragment，代码中我们给photo_recycler_view设置的layout为StaggeredGridLayoutManager 对于adapter和一般的配置大致相同。
 
 ```Kotlin

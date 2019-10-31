@@ -1,15 +1,7 @@
-.card {
+.aritcle {
     font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif;
-    box-shadow: 1px 1px 10px rgba($blue, 0.1);
-    background-color: white;
-
-    .card-header {
-        background-color: white;
-    }
-
-    hr {
-        border-top: 1px solid #b3d7ff61;
-    }
+    // box-shadow: 1px 1px 10px rgba($blue, 0.1);
+    // background-color: white;
 
     .article-preview {
         position: relative;
@@ -58,8 +50,10 @@
         h1 {
             color: black;
             font-size: 24px;
-            border-left: 5px solid #80b5ec;
-            padding-left: 10px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            // border-left: 5px solid rgba($color, 0.5);
+            // padding-left: 10px;
         }
 
         h2 {
@@ -120,9 +114,9 @@
                     // padding-right: 10px;
                     width: 6px;
                     height: 6px;
-                    border: 1px solid #80bdff;
+                    border: 1px solid $color;
                     border-radius: 10px;
-                    background: #80bdff;
+                    background: $color;
                     display: inline-block;
                     margin-right: 10px;
                     margin-top: 10px;
@@ -133,9 +127,21 @@
         }
 
         blockquote {
-            background-color: #fafcff;
-            border-left: 5px solid #d1e7ff;
-            padding: 10px;
+            position: relative;
+            &::before{
+                content: "“";
+                height: 100px;
+                font-size: 139px;
+                font-weight: 800;
+                font-style: normal;
+                font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif;
+                position: absolute;
+                left: 0;
+                top: -40px;
+                color: rgba($color, 0.1)
+            }
+            padding-left: 80px;
+            padding-top: 20px;
             font-size: 14px;
             color: #565656;
 
@@ -154,9 +160,10 @@
         // 下面是代码高亮相关
 
         .highlight {
-            background: url(/image/code.png);
+            // background: url(/image/code.png);
+            background-color: rgba($color, 0.05);
             padding: 15px;
-            border: 1px solid #d1e7ff;
+            // border: 1px solid $color;
             overflow: auto;
 
             .pre {
@@ -255,5 +262,23 @@
         font-size: 18px;
         font-weight: 400;
         font-family: Roboto,Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3",Microsoft JhengHei,WenQuanYi Micro Hei,"Microsoft YaHei",sans-serif;
+    }
+}
+
+.page-index {
+    border-left: 2px solid rgba($color, 0.2);
+    ul, ol, dl {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin:20px 30px;
+        }
+    }
+    a {
+        color: $color;
+    }
+    .overlay {
+        background-color: rgba(white, 0.8);
     }
 }

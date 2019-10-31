@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /** bootstrap **/
 :root {
   --blue: #007bff;
@@ -383,7 +384,7 @@ mark,
   .blockquote-footer::before {
     content: "\2014\00A0"; }
 
-.img-fluid, .card .article-content p img {
+.img-fluid, .aritcle .article-content p img {
   max-width: 100%;
   height: auto; }
 
@@ -6012,131 +6013,135 @@ a.text-yellow:hover, a.text-yellow:focus {
   font-family: 'ms';
   src: url("/font/Muyao-Softbrush.ttf"); }
 
-.card {
-  font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif;
-  box-shadow: 1px 1px 10px rgba(128, 181, 236, 0.1);
-  background-color: white; }
-  .card .card-header {
-    background-color: white; }
-  .card hr {
-    border-top: 1px solid #b3d7ff61; }
-  .card .article-preview {
+.aritcle {
+  font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif; }
+  .aritcle .article-preview {
     position: relative;
     font-family: Roboto,Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3",Microsoft JhengHei,WenQuanYi Micro Hei,"Microsoft YaHei",sans-serif; }
-    .card .article-preview p {
+    .aritcle .article-preview p {
       font-size: 18px;
       color: #495057; }
-  .card .article-tags {
+  .aritcle .article-tags {
     position: absolute;
     bottom: 0;
     left: 0;
     background-color: white; }
-  .card .article-content {
+  .aritcle .article-content {
     color: #565656; }
-    .card .article-content h1, .card .article-content h2, .card .article-content h3, .card .article-content h4 {
+    .aritcle .article-content h1, .aritcle .article-content h2, .aritcle .article-content h3, .aritcle .article-content h4 {
       margin-bottom: 20px; }
-    .card .article-content h1 {
+    .aritcle .article-content h1 {
       color: black;
       font-size: 24px;
-      border-left: 5px solid #80b5ec;
-      padding-left: 10px; }
-    .card .article-content h2 {
+      margin-top: 40px;
+      margin-bottom: 30px; }
+    .aritcle .article-content h2 {
       font-size: 22px; }
-    .card .article-content h3 {
+    .aritcle .article-content h3 {
       font-size: 20px; }
-    .card .article-content h4 {
+    .aritcle .article-content h4 {
       font-size: 18px; }
-    .card .article-content p {
+    .aritcle .article-content p {
       line-height: 28px;
       word-break: break-all; }
-    .card .article-content ol {
+    .aritcle .article-content ol {
       padding-left: 0px;
       margin-bottom: 10px;
       margin-left: 20px; }
-      .card .article-content ol ol {
+      .aritcle .article-content ol ol {
         padding-left: 20px; }
-      .card .article-content ol li {
+      .aritcle .article-content ol li {
         position: relative;
         margin-top: 10px; }
-    .card .article-content ul {
+    .aritcle .article-content ul {
       padding-left: 0px;
       margin-bottom: 10px; }
-      .card .article-content ul li {
+      .aritcle .article-content ul li {
         position: relative;
         list-style: none;
         padding-left: 10px;
         margin-top: 10px; }
-        .card .article-content ul li ul {
+        .aritcle .article-content ul li ul {
           padding-left: 20px; }
-        .card .article-content ul li::before {
+        .aritcle .article-content ul li::before {
           content: "";
           width: 6px;
           height: 6px;
-          border: 1px solid #80bdff;
+          border: 1px solid #444;
           border-radius: 10px;
-          background: #80bdff;
+          background: #444;
           display: inline-block;
           margin-right: 10px;
           margin-top: 10px;
           position: absolute;
           left: 0; }
-    .card .article-content blockquote {
-      background-color: #fafcff;
-      border-left: 5px solid #d1e7ff;
-      padding: 10px;
+    .aritcle .article-content blockquote {
+      position: relative;
+      padding-left: 80px;
+      padding-top: 20px;
       font-size: 14px;
       color: #565656; }
-      .card .article-content blockquote p {
+      .aritcle .article-content blockquote::before {
+        content: "“";
+        height: 100px;
+        font-size: 139px;
+        font-weight: 800;
+        font-style: normal;
+        font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif;
+        position: absolute;
+        left: 0;
+        top: -40px;
+        color: rgba(68, 68, 68, 0.1); }
+      .aritcle .article-content blockquote p {
         margin: 0; }
-    .card .article-content .table thead {
+    .aritcle .article-content .table thead {
       background-color: #fafcff;
       color: #80b5ec; }
-    .card .article-content .highlight {
-      background: url(/image/code.png);
+    .aritcle .article-content .highlight {
+      background-color: rgba(68, 68, 68, 0.05);
       padding: 15px;
-      border: 1px solid #d1e7ff;
       overflow: auto; }
-      .card .article-content .highlight .pre {
+      .aritcle .article-content .highlight .pre {
         border: none;
         margin: 0;
         padding: 0;
         color: #3d9aff; }
-      .card .article-content .highlight table {
+      .aritcle .article-content .highlight table {
         margin: 0;
         width: auto; }
-      .card .article-content .highlight td {
+      .aritcle .article-content .highlight td {
         border: none;
         padding: 0; }
-      .card .article-content .highlight tr {
+      .aritcle .article-content .highlight tr {
         border: 0; }
-      .card .article-content .highlight figcaption {
+      .aritcle .article-content .highlight figcaption {
         font-size: 0.85em;
         color: #999;
         line-height: 1em;
         margin-bottom: 1em; }
-      .card .article-content .highlight figcaption a {
+      .aritcle .article-content .highlight figcaption a {
         float: right; }
-      .card .article-content .highlight .gutter pre {
+      .aritcle .article-content .highlight .gutter pre {
         text-align: right;
         padding-right: 20px; }
-      .card .article-content .highlight .line {
+      .aritcle .article-content .highlight .line {
         height: 20px;
         color: #808080; }
-      .card .article-content .highlight pre .comment, .card .article-content .highlight pre .title {
+      .aritcle .article-content .highlight pre .comment, .aritcle .article-content .highlight pre .title {
         color: #999; }
-      .card .article-content .highlight pre .variable, .card .article-content .highlight pre .attribute, .card .article-content .highlight pre .tag, .card .article-content .highlight pre .regexp, .card .article-content .highlight pre .ruby .constant, .card .article-content .highlight pre .xml .tag, .card .article-content .highlight pre .title, .card .article-content .highlight pre .xml .pi, .card .article-content .highlight pre .xml .doctype, .card .article-content .highlight pre .html .doctype, .card .article-content .highlight pre .css .id, .card .article-content .highlight pre .css .class, .card .article-content .highlight pre .css .pseudo {
+      .aritcle .article-content .highlight pre .variable, .aritcle .article-content .highlight pre .attribute, .aritcle .article-content .highlight pre .tag, .aritcle .article-content .highlight pre .regexp, .aritcle .article-content .highlight pre .ruby .constant, .aritcle .article-content .highlight pre .xml .tag, .aritcle .article-content .highlight pre .title, .aritcle .article-content .highlight pre .xml .pi, .aritcle .article-content .highlight pre .xml .doctype, .aritcle .article-content .highlight pre .html .doctype, .aritcle .article-content .highlight pre .css .id, .aritcle .article-content .highlight pre .css .class, .aritcle .article-content .highlight pre .css .pseudo {
         color: #f2777a; }
-      .card .article-content .highlight pre .number, .card .article-content .highlight pre .preprocessor, .card .article-content .highlight pre .built_in, .card .article-content .highlight pre .literal, .card .article-content .highlight pre .params, .card .article-content .highlight pre .constant {
+      .aritcle .article-content .highlight pre .number, .aritcle .article-content .highlight pre .preprocessor, .aritcle .article-content .highlight pre .built_in, .aritcle .article-content .highlight pre .literal, .aritcle .article-content .highlight pre .params, .aritcle .article-content .highlight pre .constant {
         color: #f99157; }
-      .card .article-content .highlight pre .class, .card .article-content .highlight pre .ruby .class .title, .card .article-content .highlight pre .css .rules .attribute {
+      .aritcle .article-content .highlight pre .class, .aritcle .article-content .highlight pre .ruby .class .title, .aritcle .article-content .highlight pre .css .rules .attribute {
         color: #99cc99; }
-      .card .article-content .highlight pre .string, .card .article-content .highlight pre .value, .card .article-content .highlight pre .inheritance, .card .article-content .highlight pre .header, .card .article-content .highlight pre .ruby .symbol, .card .article-content .highlight pre .xml .cdata {
+      .aritcle .article-content .highlight pre .string, .aritcle .article-content .highlight pre .value, .aritcle .article-content .highlight pre .inheritance, .aritcle .article-content .highlight pre .header, .aritcle .article-content .highlight pre .ruby .symbol, .aritcle .article-content .highlight pre .xml .cdata {
         color: #99cc99; }
-      .card .article-content .highlight pre .css .hexcolor {
+      .aritcle .article-content .highlight pre .css .hexcolor {
         color: #66cccc; }
-      .card .article-content .highlight pre .function, .card .article-content .highlight pre .python .decorator, .card .article-content .highlight pre .python .title, .card .article-content .highlight pre .ruby .function .title, .card .article-content .highlight pre .ruby .title .keyword, .card .article-content .highlight pre .perl .sub, .card .article-content .highlight pre .javascript .title, .card .article-content .highlight pre .coffeescript .title {
+      .aritcle .article-content .highlight pre .function, .aritcle .article-content .highlight pre .python .decorator, .aritcle .article-content .highlight pre .python .title, .aritcle .article-content .highlight pre .ruby .function .title, .aritcle .article-content .highlight pre .ruby .title .keyword, .aritcle .article-content .highlight pre .perl .sub, .aritcle .article-content .highlight pre .javascript .title, .aritcle .article-content .highlight pre .coffeescript .title {
         color: #6699cc; }
-      .card .article-content .highlight pre .keyword, .card .article-content .highlight pre .javascript .function {
+      .aritcle .article-content .highlight pre .keyword, .aritcle .article-content .highlight pre .javascript .function {
         color: #cc99cc; }
 
 .card-page {
@@ -6153,6 +6158,19 @@ a.text-yellow:hover, a.text-yellow:focus {
     font-size: 18px;
     font-weight: 400;
     font-family: Roboto,Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3",Microsoft JhengHei,WenQuanYi Micro Hei,"Microsoft YaHei",sans-serif; }
+
+.page-index {
+  border-left: 2px solid rgba(68, 68, 68, 0.2); }
+  .page-index ul, .page-index ol, .page-index dl {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .page-index ul li, .page-index ol li, .page-index dl li {
+      margin: 20px 30px; }
+  .page-index a {
+    color: #444; }
+  .page-index .overlay {
+    background-color: rgba(255, 255, 255, 0.8); }
 
 .badge-light {
   user-select: none;
@@ -6298,3 +6316,20 @@ a.text-yellow:hover, a.text-yellow:focus {
   text-align: center; }
   .pager .page-number.next, .pager .page-number.prev, .pager .space.next, .pager .space.prev, .pager .extend.next, .pager .extend.prev {
     width: auto !important; }
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+  text-shadow: 1px 2px 3px #80b5ec; }
+  .nav a:hover {
+    color: #ffffff; }
+
+.header {
+  background-color: rgba(68, 68, 68, 0.9); }
+
+.footer .start {
+  background-color: rgba(68, 68, 68, 0.9); }
+
+.footer .end {
+  background-color: rgba(68, 68, 68, 0.98); }
