@@ -1,1 +1,36 @@
-<%- partial('_partial/archive', {pagination: config.category, index: true}) %>
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <%- partial('_partial/head') %>
+</head>
+
+<body class="bg-white">
+    <div style="background-image: url(/image/cover.jpg);background-size: cover ;background-position: center;">
+        <div class="w-100 h-100 header">
+            <div class="pt-5 text-white container">
+                <div style="height: 200px;"></div>
+                <div class="d-flex flex-wrap align-items-end">
+                    <div class="flex-grow-1 flex-shrink-0">
+
+                    </div>
+                    <div class="flex-shrink-0">
+                        <nav class="p-3 nav d-flex justify-content- align-items-center">
+                            <h3 class="m-0 pr-3" style="font-family: ms">
+                                <a href="/">Home</a>&nbsp;
+                                <a href="/">AboutMe</a>&nbsp;
+                                <a href="/archives">Archives</a>
+                            </h3>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto row">
+        <%- page.category %>
+    </div>
+    <%- partial('_partial/footer') %>
+</body>
+
+</html>

@@ -1,15 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh_cn">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <%- partial('_partial/head') %>
+    <link rel="stylesheet" href="/style/archives.css">
 </head>
 
-<body>
-    321321
+<body class="bg-white">
+    <div style="background-image: url(/image/cover.jpg);background-size: cover ;background-position: center;">
+        <div class="w-100 h-100 header">
+            <div class="pt-5 text-white container">
+                <div style="height: 200px;"></div>
+                <div class="d-flex flex-wrap align-items-end">
+                    <div class="flex-grow-1 flex-shrink-0">
+                        <h1 class="mb-5" style="font-family:Microsoft YaHei">Archives</h1>
+                        <div class="mb-4">
+                            <% site.categories.each(function(categorie){ %>
+                            <a href="<%- url_for(categorie.path) %>" class="badge-light mr-2">
+                                <span class="iconfont icon-discount mr-1"></span>
+                                <%- categorie.name %>
+                                (<%- categorie.posts.length %>)
+                            </a>
+                            <% }); %>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <nav class="p-3 nav d-flex justify-content- align-items-center">
+                            <h3 class="m-0 pr-3" style="font-family: ms">
+                                <a href="/">Home</a>&nbsp;
+                                <a href="/">AboutMe</a>&nbsp;
+                                <a href="/archives">Archives</a>
+                            </h3>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto row">
+        <section id="cd-timeline" class="cd-container">
+            <% var groups = archives(site.posts) %>
+            <% groups.forEach(function(group){ %>
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture">
+                    <img src="/image/time-line/cd-icon-picture.svg" alt="Picture">
+                </div>
+
+                <div class="cd-timeline-content">
+                    <% group.posts.forEach(function(p){ %>
+                    <p>
+                        <a href="<%- url_for(p.path) %>">
+                            <%- p.title %>
+                            <%- date(p.date, 'YYYY/MM/DD HH:ss') %>
+                        </a>
+                    </p>
+                    <%}) %>
+                    <h2 class="cd-date">
+                        <%- group.year %>&nbsp;
+                        （共<%- group.posts.length %>篇）
+                    </h2>
+                </div>
+            </div>
+            <%}) %>
+            <!-- <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-picture">
+                    <img src="/image/time-line/cd-icon-picture.svg" alt="Picture">
+                </div>
+
+                <div class="cd-timeline-content">
+                    <h2>HTML5+CSS3实现的响应式垂直时间轴</h2>
+                    <p>网页时间轴一般用于展示以时间为主线的事件，如企业网站常见的公司发展历程等。本文将给大家介绍一款基于HTML5和CSS3的漂亮的垂直时间轴，它可以响应页面布局，适用于HTML5开发的PC和移动手机WEB应用。
+                    </p>
+                    <a href="http://www.helloweba.com/view-blog-285.html" class="cd-read-more" target="_blank">阅读全文</a>
+                    <span class="cd-date">2015-01-06</span>
+                </div>
+            </div> -->
+        </section>
+        <div class="d-none">
+            <% site.categories.each(function(categorie, i){ %>
+            <div class="card">
+                <div class="card-header">
+                    <%- categorie.name %>
+                    (<%- categorie.posts.length %>)
+                </div>
+                <div class="card-body">
+                    <% categorie.posts.slice(0, 10).each(function(p, i){ %>
+                    <a href="<%- url_for(p.path) %>">
+                        <%- p.title %>
+                        <%- date(p.updated, 'YYYY/MM/DD HH:ss') %>
+                    </a><br>
+                    <% }) %>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+    <%- partial('_partial/footer') %>
 </body>
 
 </html>
