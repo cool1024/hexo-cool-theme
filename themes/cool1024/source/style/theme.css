@@ -6014,10 +6014,10 @@ a.text-yellow:hover, a.text-yellow:focus {
   src: url("/font/Muyao-Softbrush.ttf"); }
 
 .aritcle {
-  font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif; }
+  font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif; }
   .aritcle .article-preview {
     position: relative;
-    font-family: Roboto,Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3",Microsoft JhengHei,WenQuanYi Micro Hei,"Microsoft YaHei",sans-serif; }
+    font-family: Roboto, Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif; }
     .aritcle .article-preview p {
       font-size: 18px;
       color: #495057; }
@@ -6028,7 +6028,10 @@ a.text-yellow:hover, a.text-yellow:focus {
     background-color: white; }
   .aritcle .article-content {
     color: #565656; }
-    .aritcle .article-content h1, .aritcle .article-content h2, .aritcle .article-content h3, .aritcle .article-content h4 {
+    .aritcle .article-content h1,
+    .aritcle .article-content h2,
+    .aritcle .article-content h3,
+    .aritcle .article-content h4 {
       margin-bottom: 20px; }
     .aritcle .article-content h1 {
       color: black;
@@ -6087,7 +6090,7 @@ a.text-yellow:hover, a.text-yellow:focus {
         font-size: 139px;
         font-weight: 800;
         font-style: normal;
-        font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif;
+        font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
         position: absolute;
         left: 0;
         top: -40px;
@@ -6097,6 +6100,8 @@ a.text-yellow:hover, a.text-yellow:focus {
     .aritcle .article-content .table thead {
       background-color: #fafcff;
       color: #80b5ec; }
+    .aritcle .article-content img {
+      max-width: 100%; }
     .aritcle .article-content .highlight {
       background-color: rgba(68, 68, 68, 0.05);
       padding: 15px;
@@ -6127,21 +6132,54 @@ a.text-yellow:hover, a.text-yellow:focus {
       .aritcle .article-content .highlight .line {
         height: 20px;
         color: #808080; }
-      .aritcle .article-content .highlight pre .comment, .aritcle .article-content .highlight pre .title {
+      .aritcle .article-content .highlight pre .comment,
+      .aritcle .article-content .highlight pre .title {
         color: #999; }
-      .aritcle .article-content .highlight pre .variable, .aritcle .article-content .highlight pre .attribute, .aritcle .article-content .highlight pre .tag, .aritcle .article-content .highlight pre .regexp, .aritcle .article-content .highlight pre .ruby .constant, .aritcle .article-content .highlight pre .xml .tag, .aritcle .article-content .highlight pre .title, .aritcle .article-content .highlight pre .xml .pi, .aritcle .article-content .highlight pre .xml .doctype, .aritcle .article-content .highlight pre .html .doctype, .aritcle .article-content .highlight pre .css .id, .aritcle .article-content .highlight pre .css .class, .aritcle .article-content .highlight pre .css .pseudo {
+      .aritcle .article-content .highlight pre .variable,
+      .aritcle .article-content .highlight pre .attribute,
+      .aritcle .article-content .highlight pre .tag,
+      .aritcle .article-content .highlight pre .regexp,
+      .aritcle .article-content .highlight pre .ruby .constant,
+      .aritcle .article-content .highlight pre .xml .tag,
+      .aritcle .article-content .highlight pre .title,
+      .aritcle .article-content .highlight pre .xml .pi,
+      .aritcle .article-content .highlight pre .xml .doctype,
+      .aritcle .article-content .highlight pre .html .doctype,
+      .aritcle .article-content .highlight pre .css .id,
+      .aritcle .article-content .highlight pre .css .class,
+      .aritcle .article-content .highlight pre .css .pseudo {
         color: #f2777a; }
-      .aritcle .article-content .highlight pre .number, .aritcle .article-content .highlight pre .preprocessor, .aritcle .article-content .highlight pre .built_in, .aritcle .article-content .highlight pre .literal, .aritcle .article-content .highlight pre .params, .aritcle .article-content .highlight pre .constant {
+      .aritcle .article-content .highlight pre .number,
+      .aritcle .article-content .highlight pre .preprocessor,
+      .aritcle .article-content .highlight pre .built_in,
+      .aritcle .article-content .highlight pre .literal,
+      .aritcle .article-content .highlight pre .params,
+      .aritcle .article-content .highlight pre .constant {
         color: #f99157; }
-      .aritcle .article-content .highlight pre .class, .aritcle .article-content .highlight pre .ruby .class .title, .aritcle .article-content .highlight pre .css .rules .attribute {
+      .aritcle .article-content .highlight pre .class,
+      .aritcle .article-content .highlight pre .ruby .class .title,
+      .aritcle .article-content .highlight pre .css .rules .attribute {
         color: #99cc99; }
-      .aritcle .article-content .highlight pre .string, .aritcle .article-content .highlight pre .value, .aritcle .article-content .highlight pre .inheritance, .aritcle .article-content .highlight pre .header, .aritcle .article-content .highlight pre .ruby .symbol, .aritcle .article-content .highlight pre .xml .cdata {
+      .aritcle .article-content .highlight pre .string,
+      .aritcle .article-content .highlight pre .value,
+      .aritcle .article-content .highlight pre .inheritance,
+      .aritcle .article-content .highlight pre .header,
+      .aritcle .article-content .highlight pre .ruby .symbol,
+      .aritcle .article-content .highlight pre .xml .cdata {
         color: #99cc99; }
       .aritcle .article-content .highlight pre .css .hexcolor {
         color: #66cccc; }
-      .aritcle .article-content .highlight pre .function, .aritcle .article-content .highlight pre .python .decorator, .aritcle .article-content .highlight pre .python .title, .aritcle .article-content .highlight pre .ruby .function .title, .aritcle .article-content .highlight pre .ruby .title .keyword, .aritcle .article-content .highlight pre .perl .sub, .aritcle .article-content .highlight pre .javascript .title, .aritcle .article-content .highlight pre .coffeescript .title {
+      .aritcle .article-content .highlight pre .function,
+      .aritcle .article-content .highlight pre .python .decorator,
+      .aritcle .article-content .highlight pre .python .title,
+      .aritcle .article-content .highlight pre .ruby .function .title,
+      .aritcle .article-content .highlight pre .ruby .title .keyword,
+      .aritcle .article-content .highlight pre .perl .sub,
+      .aritcle .article-content .highlight pre .javascript .title,
+      .aritcle .article-content .highlight pre .coffeescript .title {
         color: #6699cc; }
-      .aritcle .article-content .highlight pre .keyword, .aritcle .article-content .highlight pre .javascript .function {
+      .aritcle .article-content .highlight pre .keyword,
+      .aritcle .article-content .highlight pre .javascript .function {
         color: #cc99cc; }
 
 .card-page {
@@ -6153,19 +6191,23 @@ a.text-yellow:hover, a.text-yellow:focus {
     font-size: 24px; }
   .card-page .subject {
     font-size: 16px;
-    font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif; }
+    font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif; }
   .card-page .content {
     font-size: 18px;
     font-weight: 400;
-    font-family: Roboto,Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3",Microsoft JhengHei,WenQuanYi Micro Hei,"Microsoft YaHei",sans-serif; }
+    font-family: Roboto, Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif; }
 
 .page-index {
   border-left: 2px solid rgba(68, 68, 68, 0.2); }
-  .page-index ul, .page-index ol, .page-index dl {
+  .page-index ul,
+  .page-index ol,
+  .page-index dl {
     list-style: none;
     margin: 0;
     padding: 0; }
-    .page-index ul li, .page-index ol li, .page-index dl li {
+    .page-index ul li,
+    .page-index ol li,
+    .page-index dl li {
       margin: 20px 30px; }
   .page-index a {
     color: #444; }
@@ -6318,12 +6360,18 @@ a.text-yellow:hover, a.text-yellow:focus {
     width: auto !important; }
 
 .nav a {
-  color: #c7c7c7;
   text-decoration: none;
   background-color: transparent; }
-  .nav a:hover {
-    color: white;
-    transition: all linear 0.2s; }
+  .nav a.white {
+    color: #c7c7c7; }
+    .nav a.white:hover {
+      color: white;
+      transition: all linear 0.2s; }
+  .nav a.black {
+    color: #696969; }
+    .nav a.black:hover {
+      color: black;
+      transition: all linear 0.2s; }
 
 .header {
   background-color: rgba(68, 68, 68, 0.9); }

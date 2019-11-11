@@ -1,11 +1,11 @@
 .aritcle {
-    font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif;
+    font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
     // box-shadow: 1px 1px 10px rgba($blue, 0.1);
     // background-color: white;
 
     .article-preview {
         position: relative;
-        font-family: Roboto,Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3",Microsoft JhengHei,WenQuanYi Micro Hei,"Microsoft YaHei",sans-serif;
+        font-family: Roboto, Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
 
         // &::after {
         //     content: '';
@@ -40,11 +40,14 @@
     .article-content {
         color: #565656;
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             margin-bottom: 20px;
 
             // font-family: ms;
-       
+
         }
 
         h1 {
@@ -128,18 +131,20 @@
 
         blockquote {
             position: relative;
-            &::before{
+
+            &::before {
                 content: "“";
                 height: 100px;
                 font-size: 139px;
                 font-weight: 800;
                 font-style: normal;
-                font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif;
+                font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
                 position: absolute;
                 left: 0;
                 top: -40px;
                 color: rgba($color, 0.1)
             }
+
             padding-left: 80px;
             padding-top: 20px;
             font-size: 14px;
@@ -155,6 +160,10 @@
                 background-color: #fafcff;
                 color: $blue;
             }
+        }
+
+        img {
+            max-width: 100%;
         }
 
         // 下面是代码高亮相关
@@ -208,23 +217,48 @@
                 color: #808080;
             }
 
-            pre .comment, pre .title {
+            pre .comment,
+            pre .title {
                 color: #999;
             }
 
-            pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag, pre .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
+            pre .variable,
+            pre .attribute,
+            pre .tag,
+            pre .regexp,
+            pre .ruby .constant,
+            pre .xml .tag,
+            pre .title,
+            pre .xml .pi,
+            pre .xml .doctype,
+            pre .html .doctype,
+            pre .css .id,
+            pre .css .class,
+            pre .css .pseudo {
                 color: #f2777a;
             }
 
-            pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            pre .number,
+            pre .preprocessor,
+            pre .built_in,
+            pre .literal,
+            pre .params,
+            pre .constant {
                 color: #f99157;
             }
 
-            pre .class, pre .ruby .class .title, pre .css .rules .attribute {
+            pre .class,
+            pre .ruby .class .title,
+            pre .css .rules .attribute {
                 color: #99cc99;
             }
 
-            pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            pre .string,
+            pre .value,
+            pre .inheritance,
+            pre .header,
+            pre .ruby .symbol,
+            pre .xml .cdata {
                 color: #99cc99;
             }
 
@@ -232,11 +266,19 @@
                 color: #66cccc;
             }
 
-            pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
+            pre .function,
+            pre .python .decorator,
+            pre .python .title,
+            pre .ruby .function .title,
+            pre .ruby .title .keyword,
+            pre .perl .sub,
+            pre .javascript .title,
+            pre .coffeescript .title {
                 color: #6699cc;
             }
 
-            pre .keyword, pre .javascript .function {
+            pre .keyword,
+            pre .javascript .function {
                 color: #cc99cc;
             }
         }
@@ -255,29 +297,35 @@
 
     .subject {
         font-size: 16px;
-        font-family: Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",SimSun,sans-serif;
+        font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
     }
 
     .content {
         font-size: 18px;
         font-weight: 400;
-        font-family: Roboto,Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3",Microsoft JhengHei,WenQuanYi Micro Hei,"Microsoft YaHei",sans-serif;
+        font-family: Roboto, Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
     }
 }
 
 .page-index {
     border-left: 2px solid rgba($color, 0.2);
-    ul, ol, dl {
+
+    ul,
+    ol,
+    dl {
         list-style: none;
         margin: 0;
         padding: 0;
+
         li {
-            margin:20px 30px;
+            margin: 20px 30px;
         }
     }
+
     a {
         color: $color;
     }
+
     .overlay {
         background-color: rgba(white, 0.8);
     }
