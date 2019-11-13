@@ -25,11 +25,11 @@
                         </div>
                     </div>
                     <div class="flex-shrink-0">
-                        <nav class="p-3 nav d-flex justify-content- align-items-center">
+                        <nav class="p-3 nav d-flex align-items-center">
                             <h3 class="m-0 pr-3" style="font-family: ms">
-                                <a href="/">Home</a>&nbsp;
-                                <a href="/">AboutMe</a>&nbsp;
-                                <a href="/archives">Archives</a>
+                                <a class="white" href="/">Home</a>&nbsp;
+                                <a class="white" href="/">AboutMe</a>&nbsp;
+                                <a class="white" href="/archives">Archives</a>
                             </h3>
                         </nav>
                     </div>
@@ -43,13 +43,13 @@
             <% groups.forEach(function(group){ %>
             <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture">
-                    <img src="/image/time-line/cd-icon-picture.svg" alt="Picture">
+                    <img src="/image/time-line/icon.svg" alt="Picture">
                 </div>
 
                 <div class="cd-timeline-content">
                     <% group.posts.forEach(function(p){ %>
                     <p>
-                        <a href="<%- url_for(p.path) %>">
+                        <a class="text-muted" href="<%- url_for(p.path) %>">
                             <%- p.title %>
                             <%- date(p.date, 'YYYY/MM/DD HH:ss') %>
                         </a>

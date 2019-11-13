@@ -15,3 +15,13 @@ hexo.extend.helper.register('archives', function (posts) {
     });
     return groups;
 });
+
+hexo.extend.helper.register('categories_find', function (categories, name) {
+    var oc = [];
+    categories.each(function (c) {
+        if (c.name === name) {
+            oc = c;
+        }
+    });
+    return oc;
+});
