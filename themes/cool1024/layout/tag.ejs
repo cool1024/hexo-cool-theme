@@ -1,1 +1,84 @@
-<%- partial('_partial/archive', {pagination: config.tag, index: true}) %>
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <%- partial('_partial/head') %>
+    <style>
+        @media screen and (max-width: 800px) {
+            .articles {
+                column-count: 1;
+            }
+        }
+
+        @media screen and (max-width: 1000px) and (min-width: 800px) {
+            .articles {
+                column-count: 2;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            .articles {
+                column-count: 3;
+            }
+        }
+
+        .article {
+            break-inside: avoid;
+        }
+    </style>
+</head>
+
+<% var tag = categories_find(site.tags, page.tag) %>
+
+<body class="bg-white">
+    <div style="background-image: url(/image/cover.jpg);background-size: cover ;background-position: center;">
+        <div class="w-100 h-100 header">
+            <div class="pt-5 text-white container">
+                <div style="height: 200px;"></div>
+                <div class="d-flex flex-wrap align-items-end">
+                    <div class="flex-grow-1 flex-shrink-0">
+                        <h1 class="mb-5" style="font-family:Microsoft YaHei">
+                            <div class="mb-4">
+                                <%- tag.name %>&nbsp;(<%- tag.length %>)
+                            </div>
+                        </h1>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <nav class="p-3 nav d-flex justify-content- align-items-center">
+                            <h3 class="m-0 pr-3" style="font-family: ms">
+                                <a class="white" href="/">Home</a>&nbsp;
+                                <a class="white" href="/">AboutMe</a>&nbsp;
+                                <a class="white" href="/archives">Archives</a>
+                            </h3>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container articles mx-auto py-2">
+        <% tag.posts.forEach(function(post){%>
+        <div class="article py-2">
+            <div class="card-page border border-muted shadow-sm bg-white">
+                <div class="d-flex align-items-center">
+                    <div class="title flex-grow-1 m-0 py-2 px-3 text-truncate">
+                        <%- post.title %>
+                        <small style="font-size: 14px;">
+                            &nbsp;
+                            <span class="iconfont icon-calendar"></span>
+                            <%- date(post.updated, 'YYYY/MM/DD HH:ss') %>
+                        </small>
+                    </div>
+                </div>
+                <div class="px-4 pt-3 content"><%- post.excerpt %></div>
+                <div class="px-3 pb-3 text-right">
+                    <a href="<%- url_for(post.path) %>" class="text-muted pointer" style="font-size: 1rem;">查看详情&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+        <%})%>
+    </div>
+    <%- partial('_partial/footer') %>
+</body>
+
+</html>
