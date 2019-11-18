@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <audio id="audio" src="https://wavesurfer-js.org/example/media/demo.wav" controls crossorigin="anonymous"></audio>
+    <button id="play" data-playing="false">play</button>
+    <input id="volume" type="range" min="0" max="2" value="1" step="0.01">
+    <canvas width="600" height="400" id="canvas"></canvas>
+</body>
+<script>
+    const AudioContext = (window.AudioContext || window.webkitAudioContext);
+    const audioElement = document.getElementById('audio');
+    const canvasCtx = document.getElementById('canvas').getContext('2d');
+    const audioContext = new AudioContext();
+    const track = audioContext.createMediaElementSource(audioElement);
+    const gainNode = audioContext.createGain();
+    const analyser = audioContext.createAnalyser();
+    analyser.fftSize = 2048;
+    const anaylserData = new Uint8Array(analyser.frequencyBinCount);
+    track.connect(gainNode).connect(analyser).connect(audioContext.destination);
+
+    document.getElementById('play').addEventListener('click', function () {
+        if (audioContext.state === 'suspended') {
+            audioContext.resume();
+        }
+        if (this.dataset.playing === 'false') {
+            audioElement.play();
+            this.dataset.playing = 'true';
+        } else if (this.dataset.playing === 'true') {
+            audioElement.pause();
+            this.dataset.playing = 'false';
+        }
+    }, false);
+
+    document.getElementById('volume').addEventListener('input', function () {
+        gainNode.gain.value = this.value;
+    }, false);
+
+    function display() {
+        analyser.getByteTimeDomainData(anaylserData);
+            canvasCtx.fillStyle = 'white';
+        canvasCtx.fillRect(0, 0, 600, 400);
+        canvasCtx.lineWidth = 1;
+        canvasCtx.strokeStyle = 'black';
+        canvasCtx.beginPath();
+        var x = 0;
+        var sliceWidth = 600.0 / anaylserData.length;
+        anaylserData.forEach(function (v, i) {
+            v = v / 128.0;
+            var y = v * 400 / 2;
+            if (i === 0) {
+                canvasCtx.moveTo(x, y);
+            } else {
+                canvasCtx.lineTo(x, y);
+            }
+            x += sliceWidth;
+        });
+        canvasCtx.lineTo(600, 200);
+        canvasCtx.stroke();
+        window.requestAnimationFrame(display);
+    }
+    // setInterval(display, 1000 / 40);
+    display();
+</script>
+
+</html>
