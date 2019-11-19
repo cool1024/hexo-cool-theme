@@ -6078,6 +6078,12 @@ a.text-yellow:hover, a.text-yellow:focus {
           margin-top: 10px;
           position: absolute;
           left: 0; }
+    .aritcle .article-content strong {
+      color: #80b5ec;
+      font-weight: 600; }
+    .aritcle .article-content p {
+      word-wrap: break-word;
+      white-space: nowrap; }
     .aritcle .article-content blockquote {
       position: relative;
       padding-left: 80px;

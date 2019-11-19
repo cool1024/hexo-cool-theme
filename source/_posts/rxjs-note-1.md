@@ -11,7 +11,7 @@ RxJS 是使用 Observables 的响应式编程的库，它使编写异步或基�
 <!-- more -->
 
 #### 安装
-1. `npm install rxjs`
+1. `npm install rxjs`   
 2. 我们在之webpack-example前项目中安装它
 
 #### 可观察对象（Observable）
