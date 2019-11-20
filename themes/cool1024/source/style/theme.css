@@ -6081,9 +6081,6 @@ a.text-yellow:hover, a.text-yellow:focus {
     .aritcle .article-content strong {
       color: #80b5ec;
       font-weight: 600; }
-    .aritcle .article-content p {
-      word-wrap: break-word;
-      white-space: nowrap; }
     .aritcle .article-content blockquote {
       position: relative;
       padding-left: 80px;

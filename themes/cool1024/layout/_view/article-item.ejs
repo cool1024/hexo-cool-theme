@@ -17,6 +17,9 @@
         <div>
             <%- partial('tag', {tags:post.tags}) %>
         </div>
-        <a href="<%- post.path %>" class="text-muted pointer" style="font-size: 1rem;">查看详情&gt;&gt;</a>
+        <a href="<%- post.path %>" class="text-muted pointer" style="font-size: 1rem;">
+            (<%- post.content.length %>字)
+            查看详情
+        &gt;&gt;</a>
     </div>
 </div>
