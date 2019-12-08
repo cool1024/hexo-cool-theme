@@ -6114,6 +6114,8 @@ a.text-yellow:hover, a.text-yellow:focus {
         margin: 0;
         padding: 0;
         color: #3d9aff; }
+      .aritcle .article-content .highlight pre {
+        margin-bottom: 0px !important; }
       .aritcle .article-content .highlight table {
         margin: 0;
         width: auto; }
