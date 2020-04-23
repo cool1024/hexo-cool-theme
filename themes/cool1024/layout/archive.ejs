@@ -27,9 +27,9 @@
                     <div class="flex-shrink-0">
                         <nav class="p-3 nav d-flex align-items-center">
                             <h3 class="m-0 pr-3" style="font-family: ms">
-                                <a class="white" href="/">Home</a>&nbsp;
-                                <a class="white" href="/">AboutMe</a>&nbsp;
-                                <a class="white" href="/archives">Archives</a>
+                                <% theme.cool_nav.forEach(function(item){ %>
+                                <a class="white" href="<%- item.action %>"><%- item.title %>&nbsp;</a>
+                                <% }); %>
                             </h3>
                         </nav>
                     </div>
@@ -62,19 +62,6 @@
                 </div>
             </div>
             <%}) %>
-            <!-- <div class="cd-timeline-block">
-                <div class="cd-timeline-img cd-picture">
-                    <img src="/image/time-line/cd-icon-picture.svg" alt="Picture">
-                </div>
-
-                <div class="cd-timeline-content">
-                    <h2>HTML5+CSS3实现的响应式垂直时间轴</h2>
-                    <p>网页时间轴一般用于展示以时间为主线的事件，如企业网站常见的公司发展历程等。本文将给大家介绍一款基于HTML5和CSS3的漂亮的垂直时间轴，它可以响应页面布局，适用于HTML5开发的PC和移动手机WEB应用。
-                    </p>
-                    <a href="http://www.helloweba.com/view-blog-285.html" class="cd-read-more" target="_blank">阅读全文</a>
-                    <span class="cd-date">2015-01-06</span>
-                </div>
-            </div> -->
         </section>
         <div class="d-none">
             <% site.categories.each(function(categorie, i){ %>

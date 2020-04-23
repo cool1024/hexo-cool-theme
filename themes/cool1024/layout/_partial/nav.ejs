@@ -1,9 +1,9 @@
 <div class="position-sticky w-100 shadow-sm bg-white" style="top: 0;">
-    <nav class="p-3 nav d-flex justify-content- align-items-center">
-        <h3 class="m-0 pr-3" style="font-family: ms">
-            <a class="black" href="/">Home</a>
-            <a class="black" href="/about.html">AboutMe</a>
-            <a class="black" href="/archives">Archives</a>
-        </h3>
-    </nav>
+  <nav class="p-3 nav d-flex align-items-center">
+    <h3 class="m-0 pr-3" style="font-family: ms">
+      <% theme.cool_nav.forEach(function(item){ %>
+      <a class="black" href="<%- item.action %>"><%- item.title %></a>
+      <% }); %>
+    </h3>
+  </nav>
 </div>

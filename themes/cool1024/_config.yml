@@ -1,3 +1,7 @@
+# Menu
+menus: 
+  about: /about/
+
 # About you
 cool_up:
   name: Dream Country
@@ -8,8 +12,8 @@ cool_up:
 # Navigation Menu
 cool_nav:
   - { title: Home, action: / }
-  - { title: Articles, action: /articles }
-  - { title: Tag, action: /tags }
+  - { title: About, action: /about }
+  - { title: Archives, action: /archives }
 
 # Photo Library
 cool_photo:
@@ -24,3 +28,4 @@ cool_concat:
   - { text: github, icon: github, action: https://www.github.com/cool1024 }
   - { text: bilibili, icon: bilibili, action: https://www.bilibili.com }
   - { text: twitter, icon: twitter, action: https://twitter.com/Jian08581894 }
+# language:

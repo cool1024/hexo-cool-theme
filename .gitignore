@@ -8,3 +8,4 @@ public/
 package-lock.json
 source/*
 source/_posts
+.vscode
