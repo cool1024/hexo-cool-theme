@@ -1,4 +1,4 @@
-const { watch, series, parallel } = require('gulp')
+const { watch } = require('gulp')
 const fs = require('fs')
 const spawn = require('child_process').spawn
 const sysPath = require('path')
@@ -7,26 +7,6 @@ const sass = require('sass')
 const sassDir = sysPath.join(__dirname, 'themes/cool1024/scss')
 const buildDir = sysPath.join(__dirname, 'themes/cool1024/source/style')
 
-
-function runServe() {
-    spawn('npm run dev').stdout.on('data', e => console.log(e.toString()))
-    return new Promise()
-}
-
-function runSassBuild() {
-    watch(sassDir, function (cb) {
-        console.log('Build sass...')
-        buildSass();
-        cb()
-    });
-    buildSass()
-}
-
-function buildSass() {
-    compileSassFile('theme')
-    compileSassFile('archives')
-    compileSassFile('index')
-}
 
 /**
  * Compile a sass file
@@ -43,4 +23,27 @@ function compileSassFile(name) {
     }
 }
 
-exports.default = parallel(runServe, runSassBuild)
+function runServe() {
+    const cmd = process.platform === 'win32' ? 'npm.cmd' : 'npm'
+
+    const server = spawn(cmd, ['run', 'serve'], {
+        cwd: __dirname
+    })
+    server.stdout.on('data', e => console.log(e.toString()))
+    server.stderr.on('data', e => console.log(e))
+}
+
+function buildSass(cb) {
+    compileSassFile('theme')
+    compileSassFile('archives')
+    compileSassFile('index')
+    cb()
+}
+
+exports.default = function () {
+    // 监听文件变更
+    watch(sassDir, { ignoreInitial: false }, buildSass);
+
+    // 启动服务器
+    runServe()
+}

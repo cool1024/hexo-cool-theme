@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "hexo serve"
+    "serve": "hexo serve",
+    "dev": "gulp"
   },
   "hexo": {
     "version": "4.2.0"
