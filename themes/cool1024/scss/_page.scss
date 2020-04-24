@@ -4,6 +4,7 @@
         background-color: rgba($color, 0.8);
         text-decoration: none !important;
         cursor: pointer;
+        margin-bottom: 10px;
 
         &:hover {
             background-color: rgba($color, 0.5);
@@ -14,6 +15,7 @@
     span {
         color: color-yiq($color);
         background-color: $color;
+        margin-bottom: 10px;
     }
 
     .page-number, .space, .extend {

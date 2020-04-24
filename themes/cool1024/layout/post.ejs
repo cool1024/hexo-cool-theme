@@ -15,7 +15,7 @@
                         <h3 class="m-0 pr-3" style="font-family:Microsoft YaHei">
                             <%- page.title %>
                         </h3>
-                        <div class="d-flex align-items-center mt-5 mb-4" style="font-size: 18px;font-family: ms;">
+                        <div class="flex-grow-1 mt-5 mb-4" style="font-size: 18px;font-family: ms;">
                             <img src="<%- theme.cool_up.avatar %>" width="40" height="40"
                                 class="rounded-circle bg-white pointer shadow-sm mr-3" style="padding:2px;">
                             <span class="iconfont icon-calendar mr-2"></span>
@@ -28,11 +28,14 @@
                                 <%- categorie.name %>
                             </a>
                             <% }); %>
-                            <% page.tags.forEach(function(tag){ %>
-                            <a href="<%- url_for(tag.path) %>" class="badge-light mr-2">
-                                <%- tag.name %>
-                            </a>
-                            <% }); %>
+                            <div class="mt-2" style="margin-left: 4rem;">
+                                <% page.tags.forEach(function(tag){ %>
+                                <a href="<%- url_for(tag.path) %>" class="badge-light mr-2">
+                                    <%- tag.name %>
+                                </a>
+                                <% }); %>
+                            </div>
+
                         </div>
                     </div>
                     <div class="flex-shrink-0">

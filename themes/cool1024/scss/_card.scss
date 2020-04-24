@@ -38,7 +38,7 @@
     }
 
     .article-content {
-        color: #565656;
+        color: black;
 
         h1,
         h2,
@@ -51,12 +51,12 @@
         }
 
         h1 {
-            color: black;
+            // color: black;
             font-size: 24px;
-            // margin-top: 40px;
+            margin-top: 30px;
             margin-bottom: 30px;
-            border-left: 5px solid rgba($color, 0.5);
-            padding-left: 10px;
+            // border-left: 5px solid rgba($color, 0.5);
+            // padding-left: 10px;
         }
 
         h2 {
@@ -92,6 +92,7 @@
             li {
                 position: relative;
                 margin-top: 10px;
+                font-weight: 400;
             }
         }
 
@@ -130,7 +131,7 @@
         }
 
         strong {
-            color: $blue;
+            color: $dark;
             font-weight: 600;
         }
 
@@ -147,7 +148,7 @@
                 position: absolute;
                 left: 0;
                 top: -40px;
-                color: rgba($color, 0.1)
+                color: rgba($color, 0.5);
             }
 
             padding-left: 80px;
@@ -174,12 +175,9 @@
         // 下面是代码高亮相关
 
         .highlight {
-            // background: url(/image/code.png);
-            background-color: rgba($color, 0.05);
+            background-color: $color;
             padding: 15px;
-            // border: 1px solid $color;
             overflow: auto;
-
             .pre {
                 border: none;
                 margin: 0;
@@ -223,7 +221,7 @@
 
             .line {
                 height: 20px;
-                color: #808080;
+                color: white;
             }
 
             pre .comment,
