@@ -462,7 +462,7 @@ mark,
   content: "— ";
 }
 
-.img-fluid, .aritcle .article-content p img {
+.img-fluid, .article .article-content p img {
   max-width: 100%;
   height: auto;
 }
@@ -8581,77 +8581,85 @@ h3 {
   font-family: "ms";
   src: url("/font/Muyao-Softbrush.ttf");
 }
-.aritcle {
+.article-subject img {
+  float: left;
+}
+.article-subject .content {
+  float: left;
+  width: calc(100% - 44px);
+}
+
+.article {
   font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
 }
-.aritcle .article-preview {
+.article .article-preview {
   position: relative;
   font-family: Roboto, Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
 }
-.aritcle .article-preview p {
+.article .article-preview p {
   font-size: 18px;
   color: #495057;
 }
-.aritcle .article-tags {
+.article .article-tags {
   position: absolute;
   bottom: 0;
   left: 0;
   background-color: white;
 }
-.aritcle .article-content {
+.article .article-content {
   color: black;
 }
-.aritcle .article-content h1,
-.aritcle .article-content h2,
-.aritcle .article-content h3,
-.aritcle .article-content h4 {
+.article .article-content h1,
+.article .article-content h2,
+.article .article-content h3,
+.article .article-content h4 {
   margin-bottom: 20px;
 }
-.aritcle .article-content h1 {
+.article .article-content h1 {
   font-size: 24px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.aritcle .article-content h2 {
+.article .article-content h2 {
   font-size: 22px;
 }
-.aritcle .article-content h3 {
+.article .article-content h3 {
   font-size: 20px;
 }
-.aritcle .article-content h4 {
+.article .article-content h4 {
   font-size: 18px;
 }
-.aritcle .article-content p {
+.article .article-content p {
   line-height: 28px;
   word-break: break-all;
 }
-.aritcle .article-content ol {
+.article .article-content ol {
   padding-left: 0px;
   margin-bottom: 10px;
   margin-left: 20px;
 }
-.aritcle .article-content ol ol {
+.article .article-content ol ol {
   padding-left: 20px;
 }
-.aritcle .article-content ol li {
+.article .article-content ol li {
   position: relative;
   margin-top: 10px;
   font-weight: 400;
 }
-.aritcle .article-content ul {
+.article .article-content ul {
   padding-left: 0px;
   margin-bottom: 10px;
 }
-.aritcle .article-content ul li {
+.article .article-content ul li {
   position: relative;
   list-style: none;
   padding-left: 10px;
   margin-top: 10px;
 }
-.aritcle .article-content ul li ul {
+.article .article-content ul li ul {
   padding-left: 20px;
 }
-.aritcle .article-content ul li::before {
+.article .article-content ul li::before {
   content: "";
   width: 6px;
   height: 6px;
@@ -8664,18 +8672,18 @@ h3 {
   position: absolute;
   left: 0;
 }
-.aritcle .article-content strong {
+.article .article-content strong {
   color: #444;
   font-weight: 600;
 }
-.aritcle .article-content blockquote {
+.article .article-content blockquote {
   position: relative;
   padding-left: 80px;
   padding-top: 20px;
   font-size: 14px;
   color: #565656;
 }
-.aritcle .article-content blockquote::before {
+.article .article-content blockquote::before {
   content: "“";
   height: 100px;
   font-size: 139px;
@@ -8687,113 +8695,113 @@ h3 {
   top: -40px;
   color: rgba(68, 68, 68, 0.5);
 }
-.aritcle .article-content blockquote p {
+.article .article-content blockquote p {
   margin: 0;
 }
-.aritcle .article-content .table thead {
+.article .article-content .table thead {
   background-color: #fafcff;
   color: #80b5ec;
 }
-.aritcle .article-content img {
+.article .article-content img {
   max-width: 100%;
 }
-.aritcle .article-content .highlight {
+.article .article-content .highlight {
   background-color: #444;
   padding: 15px;
   overflow: auto;
 }
-.aritcle .article-content .highlight .pre {
+.article .article-content .highlight .pre {
   border: none;
   margin: 0;
   padding: 0;
   color: #3d9aff;
 }
-.aritcle .article-content .highlight pre {
+.article .article-content .highlight pre {
   margin-bottom: 0px !important;
 }
-.aritcle .article-content .highlight table {
+.article .article-content .highlight table {
   margin: 0;
   width: auto;
 }
-.aritcle .article-content .highlight td {
+.article .article-content .highlight td {
   border: none;
   padding: 0;
 }
-.aritcle .article-content .highlight tr {
+.article .article-content .highlight tr {
   border: 0;
 }
-.aritcle .article-content .highlight figcaption {
+.article .article-content .highlight figcaption {
   font-size: 0.85em;
   color: #999;
   line-height: 1em;
   margin-bottom: 1em;
 }
-.aritcle .article-content .highlight figcaption a {
+.article .article-content .highlight figcaption a {
   float: right;
 }
-.aritcle .article-content .highlight .gutter pre {
+.article .article-content .highlight .gutter pre {
   text-align: right;
   padding-right: 20px;
 }
-.aritcle .article-content .highlight .line {
+.article .article-content .highlight .line {
   height: 20px;
   color: white;
 }
-.aritcle .article-content .highlight pre .comment,
-.aritcle .article-content .highlight pre .title {
+.article .article-content .highlight pre .comment,
+.article .article-content .highlight pre .title {
   color: #999;
 }
-.aritcle .article-content .highlight pre .variable,
-.aritcle .article-content .highlight pre .attribute,
-.aritcle .article-content .highlight pre .tag,
-.aritcle .article-content .highlight pre .regexp,
-.aritcle .article-content .highlight pre .ruby .constant,
-.aritcle .article-content .highlight pre .xml .tag,
-.aritcle .article-content .highlight pre .title,
-.aritcle .article-content .highlight pre .xml .pi,
-.aritcle .article-content .highlight pre .xml .doctype,
-.aritcle .article-content .highlight pre .html .doctype,
-.aritcle .article-content .highlight pre .css .id,
-.aritcle .article-content .highlight pre .css .class,
-.aritcle .article-content .highlight pre .css .pseudo {
+.article .article-content .highlight pre .variable,
+.article .article-content .highlight pre .attribute,
+.article .article-content .highlight pre .tag,
+.article .article-content .highlight pre .regexp,
+.article .article-content .highlight pre .ruby .constant,
+.article .article-content .highlight pre .xml .tag,
+.article .article-content .highlight pre .title,
+.article .article-content .highlight pre .xml .pi,
+.article .article-content .highlight pre .xml .doctype,
+.article .article-content .highlight pre .html .doctype,
+.article .article-content .highlight pre .css .id,
+.article .article-content .highlight pre .css .class,
+.article .article-content .highlight pre .css .pseudo {
   color: #f2777a;
 }
-.aritcle .article-content .highlight pre .number,
-.aritcle .article-content .highlight pre .preprocessor,
-.aritcle .article-content .highlight pre .built_in,
-.aritcle .article-content .highlight pre .literal,
-.aritcle .article-content .highlight pre .params,
-.aritcle .article-content .highlight pre .constant {
+.article .article-content .highlight pre .number,
+.article .article-content .highlight pre .preprocessor,
+.article .article-content .highlight pre .built_in,
+.article .article-content .highlight pre .literal,
+.article .article-content .highlight pre .params,
+.article .article-content .highlight pre .constant {
   color: #f99157;
 }
-.aritcle .article-content .highlight pre .class,
-.aritcle .article-content .highlight pre .ruby .class .title,
-.aritcle .article-content .highlight pre .css .rules .attribute {
+.article .article-content .highlight pre .class,
+.article .article-content .highlight pre .ruby .class .title,
+.article .article-content .highlight pre .css .rules .attribute {
   color: #99cc99;
 }
-.aritcle .article-content .highlight pre .string,
-.aritcle .article-content .highlight pre .value,
-.aritcle .article-content .highlight pre .inheritance,
-.aritcle .article-content .highlight pre .header,
-.aritcle .article-content .highlight pre .ruby .symbol,
-.aritcle .article-content .highlight pre .xml .cdata {
+.article .article-content .highlight pre .string,
+.article .article-content .highlight pre .value,
+.article .article-content .highlight pre .inheritance,
+.article .article-content .highlight pre .header,
+.article .article-content .highlight pre .ruby .symbol,
+.article .article-content .highlight pre .xml .cdata {
   color: #99cc99;
 }
-.aritcle .article-content .highlight pre .css .hexcolor {
+.article .article-content .highlight pre .css .hexcolor {
   color: #66cccc;
 }
-.aritcle .article-content .highlight pre .function,
-.aritcle .article-content .highlight pre .python .decorator,
-.aritcle .article-content .highlight pre .python .title,
-.aritcle .article-content .highlight pre .ruby .function .title,
-.aritcle .article-content .highlight pre .ruby .title .keyword,
-.aritcle .article-content .highlight pre .perl .sub,
-.aritcle .article-content .highlight pre .javascript .title,
-.aritcle .article-content .highlight pre .coffeescript .title {
+.article .article-content .highlight pre .function,
+.article .article-content .highlight pre .python .decorator,
+.article .article-content .highlight pre .python .title,
+.article .article-content .highlight pre .ruby .function .title,
+.article .article-content .highlight pre .ruby .title .keyword,
+.article .article-content .highlight pre .perl .sub,
+.article .article-content .highlight pre .javascript .title,
+.article .article-content .highlight pre .coffeescript .title {
   color: #6699cc;
 }
-.aritcle .article-content .highlight pre .keyword,
-.aritcle .article-content .highlight pre .javascript .function {
+.article .article-content .highlight pre .keyword,
+.article .article-content .highlight pre .javascript .function {
   color: #cc99cc;
 }
 
@@ -8855,6 +8863,10 @@ h3 {
   color: #f8f9fa !important;
 }
 
+.tagcloud-light {
+  background-color: #f8f9fa;
+}
+
 .badge-main {
   user-select: none;
   background-color: rgba(68, 68, 68, 0.1);
@@ -8870,6 +8882,10 @@ h3 {
 .badge-main:hover, .badge-main:focus {
   background-color: rgba(68, 68, 68, 0.2) !important;
   color: #444 !important;
+}
+
+.tagcloud-main {
+  background-color: #444;
 }
 
 .badge-pink {
@@ -8889,6 +8905,10 @@ h3 {
   color: #ff9acd !important;
 }
 
+.tagcloud-pink {
+  background-color: #ff9acd;
+}
+
 .badge-pink-tint {
   user-select: none;
   background-color: rgba(255, 200, 228, 0.1);
@@ -8904,6 +8924,10 @@ h3 {
 .badge-pink-tint:hover, .badge-pink-tint:focus {
   background-color: rgba(255, 200, 228, 0.2) !important;
   color: #ffc8e4 !important;
+}
+
+.tagcloud-pink-tint {
+  background-color: #ffc8e4;
 }
 
 .badge-blue {
@@ -8923,6 +8947,10 @@ h3 {
   color: #80b5ec !important;
 }
 
+.tagcloud-blue {
+  background-color: #80b5ec;
+}
+
 .badge-blue-tint {
   user-select: none;
   background-color: rgba(180, 214, 249, 0.1);
@@ -8938,6 +8966,10 @@ h3 {
 .badge-blue-tint:hover, .badge-blue-tint:focus {
   background-color: rgba(180, 214, 249, 0.2) !important;
   color: #b4d6f9 !important;
+}
+
+.tagcloud-blue-tint {
+  background-color: #b4d6f9;
 }
 
 .badge-green {
@@ -8957,6 +8989,10 @@ h3 {
   color: #56d48b !important;
 }
 
+.tagcloud-green {
+  background-color: #56d48b;
+}
+
 .badge-yellow {
   user-select: none;
   background-color: rgba(245, 242, 70, 0.1);
@@ -8972,6 +9008,46 @@ h3 {
 .badge-yellow:hover, .badge-yellow:focus {
   background-color: rgba(245, 242, 70, 0.2) !important;
   color: #f5f246 !important;
+}
+
+.tagcloud-yellow {
+  background-color: #f5f246;
+}
+
+.tagcloud {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 10px;
+  color: #fff;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  padding: 0 5px 0 10px;
+  position: relative;
+  border-radius: 0 5px 5px 0;
+  margin: 5px 9px 5px 8px;
+  font-family: Menlo, Monaco, Andale Mono, lucida console, Courier New, monospace;
+}
+.tagcloud::before {
+  content: " ";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: -18px;
+  border: 9px solid transparent;
+}
+.tagcloud::after {
+  content: " ";
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 7px;
+  left: 2px;
 }
 
 .pointer {
@@ -9007,7 +9083,9 @@ h3 {
 
 .nav a {
   text-decoration: none;
-  background-color: transparent;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  padding: 10px;
 }
 .nav a.white {
   color: #c7c7c7;

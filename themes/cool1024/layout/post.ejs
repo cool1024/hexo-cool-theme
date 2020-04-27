@@ -10,34 +10,40 @@
         <div class="w-100 h-100 header">
             <div class="pt-5 text-white container">
                 <div style="height: 200px;"></div>
-                <div class="d-flex flex-wrap align-items-end">
-                    <div class="flex-grow-1 flex-shrink-0">
-                        <h3 class="m-0 pr-3" style="font-family:Microsoft YaHei">
-                            <%- page.title %>
-                        </h3>
-                        <div class="flex-grow-1 mt-5 mb-4" style="font-size: 18px;font-family: ms;">
+                <h3 class="m-0 pr-3" style="font-family: Lato, " Helvetica Neue", Helvetica, Arial, sans-serif;">
+                    <%- page.title %>
+                </h3>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <!-- Subject -->
+                    <div class="flex-shrink-0 flex-grow-1">
+                        <div class="article-subject my-5">
                             <img src="<%- theme.cool_up.avatar %>" width="40" height="40"
-                                class="rounded-circle bg-white pointer shadow-sm mr-3" style="padding:2px;">
-                            <span class="iconfont icon-calendar mr-2"></span>
-                            <span class="text-light mr-2">
-                                <%- date(page.date, 'YYYY/MM/DD HH:ss') %>
-                            </span>
-                            <span class="iconfont icon-discount mr-2"></span>
-                            <% page.categories.forEach(function(categorie){ %>
-                            <a href="<%- url_for(categorie.path) %>" class="mr-2 text-light">
-                                <%- categorie.name %>
-                            </a>
-                            <% }); %>
-                            <div class="mt-2" style="margin-left: 4rem;">
-                                <% page.tags.forEach(function(tag){ %>
-                                <a href="<%- url_for(tag.path) %>" class="badge-light mr-2">
-                                    <%- tag.name %>
-                                </a>
-                                <% }); %>
+                                class="rounded-circle bg-white pointer shadow-sm" style="padding:2px;">
+                            <div class="content" style="font-size: 18px;">
+                                <div class="d-inline-block pl-4" style="height: 40px;line-height: 40px;">
+                                    <span class="iconfont icon-discount mr-2"></span>
+                                    <% page.categories.forEach(function(categorie){ %>
+                                    <a href="<%- url_for(categorie.path) %>" class="mr-2 text-light">
+                                        《<%- categorie.name %>》
+                                    </a>
+                                    <% }); %>
+                                    <span class="iconfont icon-calendar mr-2"></span>
+                                    <span class="text-light mr-2">
+                                        <%- date(page.date, 'YYYY/MM/DD HH:ss') %>
+                                    </span>
+                                </div>
+                                <div class="d-inline-block pl-4" style="height: 40px;line-height: 40px;">
+                                    <span class="iconfont icon-discount mr-3"></span>
+                                    <% page.tags.forEach(function(tag){ %>
+                                    <a href="<%- url_for(tag.path) %>" class="tagcloud tagcloud-pink mr-2">
+                                        <%- tag.name %>
+                                    </a>
+                                    <% }); %>
+                                </div>
                             </div>
-
                         </div>
                     </div>
+                    <!-- Menu -->
                     <div class="flex-shrink-0">
                         <nav class="p-3 nav d-flex justify-content- align-items-center">
                             <h3 class="m-0 pr-3" style="font-family: ms">
@@ -48,13 +54,12 @@
                         </nav>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
     <div class="container mx-auto row">
         <div class="col-12 col-lg-8 col-sm-12 mb-4" style="min-height: calc(80vh - 370px)">
-            <div class="aritcle">
+            <div class="article">
                 <div class="article-content pt-3">
                     <div style="font-size: 16px;font-family:Microsoft YaHei;font-weight: 300">
                         <blockquote><%- page.excerpt %></blockquote>

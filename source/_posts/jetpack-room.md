@@ -1,7 +1,7 @@
 ---
-title: JetPack-Room预览
+title: Android - JetPack Room
 date: 2019-06-29 11:37:36
-tags: ["android","jetpack"]
+tags: ["Android","Jetpack"]
 categories: Android开发
 ---
 
