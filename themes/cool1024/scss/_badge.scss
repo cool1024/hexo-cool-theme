@@ -23,27 +23,33 @@ $value in $theme-colors {
     }
 
     .tagcloud-#{$color} {
-        background-color: $value;
+        background-color: rgba($value, 0.2);
+        color: rgba($value, 0.8);
 
-        &:::before {
-            border-right-color: $color;
+        &:hover {
+            color: $value;
+        }
+
+        &::before {
+            border-right-color: rgba($value, 0.2) !important;
+        }
+
+        &::after {
+            box-shadow: 0 0 0 1px rgba($value, 0.3);
         }
     }
 }
 
 .tagcloud {
     display: inline-block;
-    text-decoration: none;
+    text-decoration: none !important;
     font-weight: 400;
     font-size: 10px;
-    color: #fff;
     height: 18px;
     line-height: 18px;
-    float: left;
     padding: 0 5px 0 10px;
     position: relative;
     border-radius: 0 5px 5px 0;
-    margin: 5px 9px 5px 8px;
     font-family: Menlo, Monaco, Andale Mono, lucida console, Courier New, monospace;
 
     &::before {
@@ -62,7 +68,6 @@ $value in $theme-colors {
         height: 4px;
         background-color: #fff;
         border-radius: 4px;
-        box-shadow: 0 0 0 1px rgba(0, 0, 0, .3);
         position: absolute;
         top: 7px;
         left: 2px;

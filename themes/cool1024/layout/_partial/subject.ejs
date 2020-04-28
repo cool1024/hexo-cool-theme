@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-between flex-wrap">
+    <!-- Subject -->
+    <div class="flex-shrink-0 flex-grow-1">
+        <div class="article-subject my-5">
+            <img src="<%- theme.cool_up.avatar %>" width="40" height="40"
+                class="rounded-circle bg-white pointer shadow-sm" style="padding:2px;">
+            <div class="content" style="font-size: 18px;">
+                <div class="d-inline-flex align-items-center pl-4" style="height: 40px;line-height: 40px;">
+                    <span class="iconfont icon-discount mr-2"></span>
+                    <% page.categories.forEach(function(categorie){ %>
+                    <a href="<%- url_for(categorie.path) %>" class="mr-2 text-light">
+                        《<%- categorie.name %>》
+                    </a>
+                    <% }); %>
+                    <span class="iconfont icon-calendar mr-2"></span>
+                    <span class="text-light mr-2">
+                        <%- date(page.date, 'YYYY/MM/DD HH:ss') %>
+                    </span>
+                </div>
+                <div class="d-inline-block pl-4" style="height: 40px;line-height: 40px;">
+                    <span class="iconfont icon-discount mr-3"></span>
+                    <% page.tags.forEach(function(tag){ %>
+                    <a href="<%- url_for(tag.path) %>" class="tagcloud tagcloud-light mr-2">
+                        <%- tag.name %>
+                    </a>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu -->
+    <div class="flex-shrink-0 d-flex align-items-end">
+        <nav class="nav">
+            <% theme.cool_nav.forEach(function(item){ %>
+            <a class="white" href="<%- item.action %>"><%- item.title %></a>
+            <% }); %>
+        </nav>
+    </div>
+</div>

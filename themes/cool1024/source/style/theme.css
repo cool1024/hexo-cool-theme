@@ -8607,27 +8607,28 @@ h3 {
   background-color: white;
 }
 .article .article-content {
-  color: black;
+  color: #444;
 }
 .article .article-content h1,
 .article .article-content h2,
 .article .article-content h3,
 .article .article-content h4 {
-  margin-bottom: 20px;
-}
-.article .article-content h1 {
-  font-size: 24px;
   margin-top: 30px;
   margin-bottom: 30px;
+  color: black;
+  font-weight: 600;
+}
+.article .article-content h1 {
+  font-size: 25px;
 }
 .article .article-content h2 {
-  font-size: 22px;
+  font-size: 21px;
 }
 .article .article-content h3 {
-  font-size: 20px;
+  font-size: 18px;
 }
 .article .article-content h4 {
-  font-size: 18px;
+  font-size: 16px;
 }
 .article .article-content p {
   line-height: 28px;
@@ -8678,8 +8679,10 @@ h3 {
 }
 .article .article-content blockquote {
   position: relative;
-  padding-left: 80px;
-  padding-top: 20px;
+  padding-left: 90px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-right: 20px;
   font-size: 14px;
   color: #565656;
 }
@@ -8691,9 +8694,9 @@ h3 {
   font-style: normal;
   font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
   position: absolute;
-  left: 0;
-  top: -40px;
-  color: rgba(68, 68, 68, 0.5);
+  left: 10px;
+  top: -30px;
+  color: rgba(68, 68, 68, 0.3);
 }
 .article .article-content blockquote p {
   margin: 0;
@@ -8864,7 +8867,17 @@ h3 {
 }
 
 .tagcloud-light {
-  background-color: #f8f9fa;
+  background-color: rgba(248, 249, 250, 0.2);
+  color: rgba(248, 249, 250, 0.8);
+}
+.tagcloud-light:hover {
+  color: #f8f9fa;
+}
+.tagcloud-light::before {
+  border-right-color: rgba(248, 249, 250, 0.2) !important;
+}
+.tagcloud-light::after {
+  box-shadow: 0 0 0 1px rgba(248, 249, 250, 0.3);
 }
 
 .badge-main {
@@ -8885,7 +8898,17 @@ h3 {
 }
 
 .tagcloud-main {
-  background-color: #444;
+  background-color: rgba(68, 68, 68, 0.2);
+  color: rgba(68, 68, 68, 0.8);
+}
+.tagcloud-main:hover {
+  color: #444;
+}
+.tagcloud-main::before {
+  border-right-color: rgba(68, 68, 68, 0.2) !important;
+}
+.tagcloud-main::after {
+  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.3);
 }
 
 .badge-pink {
@@ -8906,7 +8929,17 @@ h3 {
 }
 
 .tagcloud-pink {
-  background-color: #ff9acd;
+  background-color: rgba(255, 154, 205, 0.2);
+  color: rgba(255, 154, 205, 0.8);
+}
+.tagcloud-pink:hover {
+  color: #ff9acd;
+}
+.tagcloud-pink::before {
+  border-right-color: rgba(255, 154, 205, 0.2) !important;
+}
+.tagcloud-pink::after {
+  box-shadow: 0 0 0 1px rgba(255, 154, 205, 0.3);
 }
 
 .badge-pink-tint {
@@ -8927,7 +8960,17 @@ h3 {
 }
 
 .tagcloud-pink-tint {
-  background-color: #ffc8e4;
+  background-color: rgba(255, 200, 228, 0.2);
+  color: rgba(255, 200, 228, 0.8);
+}
+.tagcloud-pink-tint:hover {
+  color: #ffc8e4;
+}
+.tagcloud-pink-tint::before {
+  border-right-color: rgba(255, 200, 228, 0.2) !important;
+}
+.tagcloud-pink-tint::after {
+  box-shadow: 0 0 0 1px rgba(255, 200, 228, 0.3);
 }
 
 .badge-blue {
@@ -8948,7 +8991,17 @@ h3 {
 }
 
 .tagcloud-blue {
-  background-color: #80b5ec;
+  background-color: rgba(128, 181, 236, 0.2);
+  color: rgba(128, 181, 236, 0.8);
+}
+.tagcloud-blue:hover {
+  color: #80b5ec;
+}
+.tagcloud-blue::before {
+  border-right-color: rgba(128, 181, 236, 0.2) !important;
+}
+.tagcloud-blue::after {
+  box-shadow: 0 0 0 1px rgba(128, 181, 236, 0.3);
 }
 
 .badge-blue-tint {
@@ -8969,7 +9022,17 @@ h3 {
 }
 
 .tagcloud-blue-tint {
-  background-color: #b4d6f9;
+  background-color: rgba(180, 214, 249, 0.2);
+  color: rgba(180, 214, 249, 0.8);
+}
+.tagcloud-blue-tint:hover {
+  color: #b4d6f9;
+}
+.tagcloud-blue-tint::before {
+  border-right-color: rgba(180, 214, 249, 0.2) !important;
+}
+.tagcloud-blue-tint::after {
+  box-shadow: 0 0 0 1px rgba(180, 214, 249, 0.3);
 }
 
 .badge-green {
@@ -8990,7 +9053,17 @@ h3 {
 }
 
 .tagcloud-green {
-  background-color: #56d48b;
+  background-color: rgba(86, 212, 139, 0.2);
+  color: rgba(86, 212, 139, 0.8);
+}
+.tagcloud-green:hover {
+  color: #56d48b;
+}
+.tagcloud-green::before {
+  border-right-color: rgba(86, 212, 139, 0.2) !important;
+}
+.tagcloud-green::after {
+  box-shadow: 0 0 0 1px rgba(86, 212, 139, 0.3);
 }
 
 .badge-yellow {
@@ -9011,22 +9084,29 @@ h3 {
 }
 
 .tagcloud-yellow {
-  background-color: #f5f246;
+  background-color: rgba(245, 242, 70, 0.2);
+  color: rgba(245, 242, 70, 0.8);
+}
+.tagcloud-yellow:hover {
+  color: #f5f246;
+}
+.tagcloud-yellow::before {
+  border-right-color: rgba(245, 242, 70, 0.2) !important;
+}
+.tagcloud-yellow::after {
+  box-shadow: 0 0 0 1px rgba(245, 242, 70, 0.3);
 }
 
 .tagcloud {
   display: inline-block;
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: 400;
   font-size: 10px;
-  color: #fff;
   height: 18px;
   line-height: 18px;
-  float: left;
   padding: 0 5px 0 10px;
   position: relative;
   border-radius: 0 5px 5px 0;
-  margin: 5px 9px 5px 8px;
   font-family: Menlo, Monaco, Andale Mono, lucida console, Courier New, monospace;
 }
 .tagcloud::before {
@@ -9044,7 +9124,6 @@ h3 {
   height: 4px;
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 7px;
   left: 2px;
