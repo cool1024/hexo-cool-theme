@@ -16,8 +16,8 @@
                         <h1 class="mb-5" style="font-family:Microsoft YaHei">Archives</h1>
                         <div class="mb-4">
                             <% site.categories.each(function(categorie){ %>
-                            <a href="<%- url_for(categorie.path) %>" class="badge-light mr-2">
-                                <span class="iconfont icon-discount mr-1"></span>
+                            <a href="<%- url_for(categorie.path) %>" class="tagcloud tagcloud-light mr-2">
+                                <!-- <span class="iconfont icon-discount mr-1"></span> -->
                                 <%- categorie.name %>
                                 (<%- categorie.posts.length %>)
                             </a>
@@ -62,6 +62,9 @@
                 </div>
             </div>
             <%}) %>
+            <div class="pager m-4">
+                <%- paginator({total: page.total, current:page.current }) %>
+            </div>
         </section>
         <div class="d-none">
             <% site.categories.each(function(categorie, i){ %>
