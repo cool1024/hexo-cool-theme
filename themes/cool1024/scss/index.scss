@@ -1,3 +1,7 @@
+body {
+    background-color: #eee;
+}
+
 .cool-aside {
     width: 38%;
     top: 0;
@@ -29,11 +33,11 @@
         margin-top: 25%;
         width: 85%;
 
-        h2{
+        h2 {
             font-weight: 300;
         }
 
-        .text-reset{
+        .text-reset {
             opacity: 0.8;
         }
     }

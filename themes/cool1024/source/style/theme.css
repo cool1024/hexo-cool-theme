@@ -9181,6 +9181,55 @@ h3 {
   transition: all linear 0.2s;
 }
 
+nav.static {
+  font-family: "Rosario", "Monda", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+nav.static .brand {
+  padding: 20px;
+  color: white;
+  margin-right: 10px;
+}
+nav.static .brand h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+nav.static .brand img {
+  border: 2px solid white;
+}
+nav.static a {
+  text-decoration: none;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  padding: 10px;
+  position: relative;
+}
+nav.static a.white {
+  color: #c7c7c7;
+}
+nav.static a.white:hover {
+  color: white;
+  transition: all linear 0.2s;
+}
+nav.static a.black {
+  color: #444;
+}
+nav.static a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  margin-left: 10%;
+  margin-right: 10%;
+  transition: all 0.5s;
+}
+nav.static a:hover::after {
+  width: 80%;
+  background-color: #444;
+}
+
 .header {
   background-color: rgba(68, 68, 68, 0.9);
 }
