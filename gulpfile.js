@@ -37,6 +37,7 @@ function buildSass(cb) {
     compileSassFile('theme')
     compileSassFile('archives')
     compileSassFile('index')
+    compileSassFile('post')
     cb()
 }
 

@@ -1,64 +1,19 @@
-body {
-  background-color: #eee;
+/** bootstrap **/
+.card-page {
+  border-bottom: 1px solid rgba(68, 68, 68, 0.3);
 }
-
-.cool-aside {
-  width: 38%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  position: fixed;
-  height: 100%;
-  z-index: 3;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.cool-aside .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.5);
-}
-.cool-aside .featured {
+.card-page .title {
+  border-left: 2px solid #444;
+  color: #444;
   font-weight: 300;
-  font-family: "Montserrat", "Noto Serif SC", sans-serif;
+  font-size: 24px;
+}
+.card-page .subject {
+  font-size: 16px;
+  font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
+}
+.card-page .content {
   font-size: 18px;
-  z-index: 2;
-  margin: auto;
-  margin-top: 25%;
-  width: 85%;
-}
-.cool-aside .featured h2 {
-  font-weight: 300;
-}
-.cool-aside .featured .text-reset {
-  opacity: 0.8;
-}
-.cool-aside .avatar img {
-  border: 3px solid white;
-}
-
-.cool-main {
-  margin-left: 38%;
-  position: relative;
-  z-index: 4;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-@media screen and (max-width: 768px) {
-  .cool-aside {
-    width: 100%;
-    position: relative;
-    z-index: 4;
-    height: 450px;
-  }
-
-  .cool-main {
-    margin-left: 0;
-  }
+  font-weight: 400;
+  font-family: Roboto, Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
 }

@@ -1,0 +1,56 @@
+/** bootstrap **/
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+// 基础属性配置（阴影，渐变，动画，印刷样式）
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-transitions: false;
+$enable-print-styles: true;
+
+$font-size-base: 0.8rem;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+
+// 表格样式配置
+// $table-head-bg: rgba($cyan, 0.1);
+// $table-head-color: $blue;
+// $table-border-width: 0;
+$table-border-color: #d1e7ff;
+
+// $table-striped-order: even;
+// $table-accent-bg: rgba($cyan, 0.05) !default;
+// $table-bg: rgba($gray-100, 0.1);
+// $table-hover-bg: rgba($cyan, 0.3) !default;
+// $table-active-bg: $table-hover-bg !default;
+
+// 卡片样式配置
+$card-border-radius: 0;
+$card-border-width: 0;
+$card-cap-bg: white;
+
+// 按钮样式配置
+$btn-box-shadow: none;
+
+// 下拉按钮样式配置
+$dropdown-border-radius: 0;
+$dropdown-min-width: auto;
+
+// 输入框配置
+$input-btn-focus-box-shadow: none;
+$input-focus-box-shadow: none;
+
+// 网格间距配置
+$grid-gutter-width: 15px !default;
+
+$gray: #555;
+$dark: #444;
+$pink: #ff9acd;
+$pink-tint: #ffc8e4;
+$blue: #80b5ec;
+$blue-tint: #b4d6f9;
+$green: rgb(86, 212, 139);
+$yellow: rgb(245, 242, 70);
+$color: $dark;
+
+$theme-colors: ("light": $light, "main": $dark, "pink": $pink, "pink-tint": $pink-tint, "blue": $blue, "blue-tint": $blue-tint, "green": $green, "yellow": $yellow);

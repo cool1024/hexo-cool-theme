@@ -1,0 +1,318 @@
+@import "colors";
+
+.page-index {
+    border-left: 2px solid rgba($color, 0.2);
+
+    ul,
+    ol,
+    dl {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 20px 30px;
+        }
+    }
+
+    a {
+        color: $color;
+    }
+
+    .overlay {
+        background-color: rgba(white, 0.8);
+    }
+}
+
+.article {
+    font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
+    // box-shadow: 1px 1px 10px rgba($blue, 0.1);
+    background-color: white;
+
+    .article-preview {
+        position: relative;
+        font-family: Roboto, Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
+
+        // &::after {
+        //     content: '';
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     opacity: 0.4;
+        //     background-size: contain;
+        //     background-image: url(/image/card.png);
+        //     background-position: right bottom;
+        //     background-repeat: no-repeat;
+        // }
+
+        p {
+            font-size: 18px;
+            color: #495057;
+        }
+    }
+
+    .article-tags {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+    }
+
+    .article-content {
+        color: $dark;
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            color: black;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 25px;
+            // border-left: 5px solid rgba($color, 0.5);
+            // padding-left: 10px;
+        }
+
+        h2 {
+            font-size: 21px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+
+        p {
+            line-height: 28px;
+            word-break: break-all;
+
+            // img {
+            //     @extend .img-fluid;
+            // }
+        }
+
+        ol {
+            padding-left: 0px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+
+            ol {
+                padding-left: 20px;
+            }
+
+            li {
+                position: relative;
+                margin-top: 10px;
+                font-weight: 400;
+            }
+        }
+
+        ul {
+            padding-left: 0px;
+            margin-bottom: 10px;
+
+            li {
+                position: relative;
+                list-style: none;
+                padding-left: 10px;
+                margin-top: 10px;
+
+                ul {
+                    padding-left: 20px;
+                }
+
+                &::before {
+                    content: "";
+
+                    // font-family: "iconfont" !important;
+                    // color: #80bdff;
+                    // padding-right: 10px;
+                    width: 6px;
+                    height: 6px;
+                    border: 1px solid $color;
+                    border-radius: 10px;
+                    background: $color;
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-top: 10px;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+
+        strong {
+            color: $dark;
+            font-weight: 600;
+        }
+
+        blockquote {
+            position: relative;
+            padding-left: 90px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            font-size: 14px;
+            color: #565656;
+
+            &::before {
+                content: "“";
+                height: 100px;
+                font-size: 139px;
+                font-weight: 800;
+                font-style: normal;
+                font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
+                position: absolute;
+                left: 10px;
+                top: -30px;
+                color: rgba($color, 0.3);
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .table {
+            thead {
+                background-color: #fafcff;
+                color: $blue;
+            }
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        // 下面是代码高亮相关
+
+        .highlight {
+            background-color: $color;
+            padding: 15px;
+            overflow: auto;
+
+            .pre {
+                border: none;
+                margin: 0;
+                padding: 0;
+                color: #3d9aff;
+            }
+
+            pre {
+                margin-bottom: 0px !important;
+            }
+
+            table {
+                margin: 0;
+                width: auto;
+            }
+
+            td {
+                border: none;
+                padding: 0;
+            }
+
+            tr {
+                border: 0;
+            }
+
+            figcaption {
+                font-size: 0.85em;
+                color: #999;
+                line-height: 1em;
+                margin-bottom: 1em;
+            }
+
+            figcaption a {
+                float: right;
+            }
+
+            .gutter pre {
+                text-align: right;
+                padding-right: 20px;
+            }
+
+            .line {
+                height: 20px;
+                color: white;
+            }
+
+            pre .comment,
+            pre .title {
+                color: #999;
+            }
+
+            pre .variable,
+            pre .attribute,
+            pre .tag,
+            pre .regexp,
+            pre .ruby .constant,
+            pre .xml .tag,
+            pre .title,
+            pre .xml .pi,
+            pre .xml .doctype,
+            pre .html .doctype,
+            pre .css .id,
+            pre .css .class,
+            pre .css .pseudo {
+                color: #f2777a;
+            }
+
+            pre .number,
+            pre .preprocessor,
+            pre .built_in,
+            pre .literal,
+            pre .params,
+            pre .constant {
+                color: #f99157;
+            }
+
+            pre .class,
+            pre .ruby .class .title,
+            pre .css .rules .attribute {
+                color: #99cc99;
+            }
+
+            pre .string,
+            pre .value,
+            pre .inheritance,
+            pre .header,
+            pre .ruby .symbol,
+            pre .xml .cdata {
+                color: #99cc99;
+            }
+
+            pre .css .hexcolor {
+                color: #66cccc;
+            }
+
+            pre .function,
+            pre .python .decorator,
+            pre .python .title,
+            pre .ruby .function .title,
+            pre .ruby .title .keyword,
+            pre .perl .sub,
+            pre .javascript .title,
+            pre .coffeescript .title {
+                color: #6699cc;
+            }
+
+            pre .keyword,
+            pre .javascript .function {
+                color: #cc99cc;
+            }
+        }
+    }
+}

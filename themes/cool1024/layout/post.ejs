@@ -1,75 +1,35 @@
 <!DOCTYPE html>
-<html lang="zh_cn">
+<html lang="en">
 
 <head>
     <%- partial('_partial/head') %>
+    <link rel="stylesheet" href="/style/post.css">
 </head>
 
-<body class="bg-white">
-    <div style="background-image: url(/image/cover.jpg);background-size: cover ;background-position: center;">
-        <div class="w-100 h-100 header">
-            <div class="pt-5 text-white container">
-                <div style="height: 200px;"></div>
-                <h1 class="m-0 pr-3" style="font-family: Lato, " Helvetica Neue", Helvetica, Arial, sans-serif;">
-                    <%- page.title %>
-                </h1>
-                <div class="d-flex justify-content-between flex-wrap mt-4">
-                    <div class="mt-3 d-flex align-items-center" style="font-size: 1rem;">
-                        <img src="<%- theme.cool_up.avatar %>" width="40" height="40"
-                            class="rounded-circle bg-white pointer shadow-sm mr-3" style="padding:2px;">
-                        <span class="iconfont icon-discount mr-2"></span>
-                        <% page.categories.forEach(function(categorie){ %>
-                        <a href="<%- url_for(categorie.path) %>" class="mr-2 text-light">
-                            《<%- categorie.name %>》
-                        </a>
-                        <% }); %>
-                        <span class="iconfont icon-calendar mr-2"></span>
-                        <span class="text-light mr-2">
-                            <%- date(page.date, 'YYYY/MM/DD HH:ss') %>
-                        </span>
-                    </div>
-                    <div class="mt-3 d-flex align-items-center">
-                        <span class="iconfont icon-discount mr-3"></span>
-                        <% page.tags.forEach(function(tag){ %>
-                        <a href="<%- url_for(tag.path) %>" class="tagcloud tagcloud-light mr-4">
-                            <%- tag.name %>
-                        </a>
-                        <% }); %>
-                    </div>
-                </div>
-                <div style="height: 40px;"></div>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="w-100">
-        <div class="container">
-            <nav class="nav">
-                <% theme.cool_nav.forEach(function(item){ %>
-                <a class="white" href="<%- item.action %>"><%- item.title %></a>
-                <% }); %>
-            </nav>
-        </div>
-    </div> -->
-    <div class="container mx-auto row">
-        <div class="col-12 col-lg-8 col-sm-12 mb-4" style="min-height: calc(80vh - 370px)">
-            <div class="article">
-                <div class="article-content pt-3">
-                    <div style="font-size: 16px;font-family:Microsoft YaHei;font-weight: 300">
-                        <blockquote><%- page.excerpt %></blockquote>
-                        <%- page.more %>
+<body style="background-color: #eee;">
+    <div class="bg-main" style="height:3px;"></div>
+    <div class="container p-0">
+        <%- partial('_partial/static-nav') %>
+        <div class="d-flex flex-wrap">
+            <div class="col-12 col-lg-9 col-sm-12 mb-4 ml-0" style="min-height: calc(80vh - 370px)">
+                <div class="article">
+                    <div class="article-content mt-4">
+                        <div style="font-size: 16px;font-family:Microsoft YaHei;font-weight: 300">
+                            <blockquote><%- page.excerpt %></blockquote>
+                            <%- page.more %>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-lg-4 col-sm-12 mb-4">
-            <div class="page-index mt-5">
-                <div class="overlay py-1">
-                    <%- toc(page.content) %>
+            <div style="min-width: 225px;" class="mb-4">
+                <div class="page-index mt-4">
+                    <div class="overlay py-1">
+                        <%- toc(page.content) %>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <%- partial('_partial/footer') %>
 </body>
 
 </html>
