@@ -1,7 +1,7 @@
 @import "colors";
 
 .page-index {
-    border-left: 2px solid rgba($color, 0.2);
+    // border-left: 2px solid rgba($color, 0.2);
 
     ul,
     ol,
@@ -20,7 +20,7 @@
     }
 
     .overlay {
-        background-color: rgba(white, 0.8);
+        background-color: white;
     }
 }
 

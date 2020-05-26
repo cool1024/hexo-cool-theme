@@ -38,6 +38,7 @@ function buildSass(cb) {
     compileSassFile('archives')
     compileSassFile('index')
     compileSassFile('post')
+    compileSassFile('about')
     cb()
 }
 
