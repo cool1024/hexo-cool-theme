@@ -241,3 +241,7 @@
 .article .article-content .highlight pre .javascript .function {
   color: #cc99cc;
 }
+.article .article-content .highlight pre .meta,
+.article .article-content .highlight pre .bash {
+  color: #99cc99;
+}

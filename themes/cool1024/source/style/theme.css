@@ -8966,6 +8966,9 @@ nav.static a:hover::after {
   background-color: rgba(68, 68, 68, 0.9);
 }
 
+.footer {
+  font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
+}
 .footer .start {
   background-color: rgba(68, 68, 68, 0.9);
 }

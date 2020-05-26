@@ -313,6 +313,14 @@
             pre .javascript .function {
                 color: #cc99cc;
             }
+
+            pre {
+
+                .meta,
+                .bash {
+                    color: #99cc99;
+                }
+            }
         }
     }
 }
