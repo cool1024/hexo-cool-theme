@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+    <%- partial('_partial/head') %>
+    <link rel="stylesheet" href="/style/archives.css">
+</head>
+
+<body class="bg-white">
+    <div class="bg-main" style="height:3px;"></div>
+    <div class="container position-relative p-0">
+        <%- partial('_partial/static-nav') %>
+        <div class="content">
+	        <div class="mt-3">
+                <% site.categories.each(function(categorie){ %>
+                    <a href="<%- url_for(categorie.path) %>" class="tagcloud tagcloud-main mr-2">
+                        <%- categorie.name %>(<%- categorie.posts.length %>)
+                    </a>
+                <% }); %>
+            </div>
+            <hr>
+            <div>
+                <% var groups = archives(site.posts) %>
+                <% groups.forEach(function(group){ %>
+                <div class="cd-timeline-block">
+                    <div class="cd-timeline-img cd-picture">
+                        <!-- <img src="/image/time-line/icon.svg" alt="Picture"> -->
+                    </div>
+    
+                    <div class="cd-timeline-content">
+                        <% group.posts.forEach(function(p){ %>
+                        <p>
+                            <a class="text-muted" href="<%- url_for(p.path) %>">
+                                <%- p.title %>
+                                <%- date(p.date, 'YYYY/MM/DD HH:ss') %>
+                            </a>
+                        </p>
+                        <%}) %>
+                        <h2 class="cd-date">
+                            <%- group.year %>&nbsp;
+                            （共<%- group.posts.length %>篇）
+                        </h2>
+                    </div>
+                </div>
+                <%}) %>
+            </div>
+            <div class="pager m-4">
+                <%- paginator({total: page.total, current:page.current }) %>
+            </div>
+        </div>
+        <div class="mt-3">
+            <%- partial('_partial/footer') %>
+        </div>
+    </div>
+</body>
+
+</html>
