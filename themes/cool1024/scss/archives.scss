@@ -18,7 +18,7 @@ img {
 
 .cd-container::after {
     /* clearfix */
-    content: '';
+    content: "";
     display: table;
     clear: both;
 }
@@ -29,8 +29,20 @@ img {
   
   -------------------------------- */
 .timeline-block {
-    position: relative;
     // border: 1px solid black;
+    .year {
+        width: 15rem;
+        .number {
+            margin-right: 1rem;
+            padding-bottom: 0.2rem;
+            padding-left: 0.2rem;
+            padding-right: 4rem;
+            border-bottom: 1px dashed rgba($color, 0.5);
+        }
+    }
+    .left {
+        position: relative;
+    }
     .marker {
         position: absolute;
         top: calc(50% - 1rem);
@@ -43,6 +55,7 @@ img {
     }
     .content {
         border-left: 4px dashed $color;
-        margin-left: -4px;
+        margin-left: -2px;
+        min-height: 100px;
     }
 }
