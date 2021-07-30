@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="/style/archives.css">
 </head>
 
-<body class="bg-white">
+<body class="bg-light">
     <div class="bg-main" style="height:3px;"></div>
     <div class="container position-relative p-0">
-        <%- partial('_partial/static-nav') %>
+        <%- partial('_partial/static-nav',{active:'archive'}) %>
         <div class="content">
 	        <div class="mt-3 pl-3">
                 <% site.categories.each(function(categorie){ %>
@@ -19,29 +19,92 @@
                 <% }); %>
             </div>
             <hr>
-            <div>
+            <div class="timeline-content">
                 <% var groups = archives(site.posts) %>
-                <% groups.forEach(function(group){ %>
-                <div class="timeline-block d-flex">
-                    <h3 class="flex-shrink-0 text-right h-100 align-self-center year">
-                        <span class="number"><%- group.year %></span>
-                    </h3>
-                    <div class="flex-grow-1 left">
-                        <div class="marker"></div>
-                        <div class="content d-flex justify-content-center flex-column pl-5">
-                            <% group.posts.forEach(function(p){ %>
-                            <h6 class="item my-1">
-                                <a class="text-muted" href="<%- url_for(p.path) %>">
-                                    <%- p.title %>
-                                    <%- date(p.date, 'YYYY/MM/DD HH:ss') %>
-                                </a>
-                            </h6>
-                            <%}) %>
+                <% groups.forEach(function(group,i){ %>
+                    <% if(i%2>0){ %>
+                    <div class="timeline-block w-100 mb-4">
+                        <h3 class="d-inline-block year text-right w-50">
+                            <span class="number pr-5 mr-3"><%- group.year %></span>
+                        </h3>
+                        <div class="d-inline-block position-relative content" style="margin-left: -3px;">
+                            <div class="marker marker-left"></div>
+                            <div class="d-flex justify-content-center flex-column pl-4">
+                                <% group.posts.forEach(function(p){ %>
+                                <h6 class="item my-1">
+                                    <a href="<%- url_for(p.path) %>">
+                                        <small class="text-muted d-inline-block" style="width: 85px;">[<%- date(p.date, 'MM/DD HH:ss') %>]</small>
+                                        <span class="text-main"><%- p.title %></span>
+                                    </a>
+                                </h6>
+                                <%}) %>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <% } else {%>
+                    <div class="timeline-block w-100 mb-4">
+                        <div class="w-50 d-inline-block position-relative content">
+                            <div class="marker marker-right"></div>
+                            <div class="d-flex justify-content-center flex-column pr-4">
+                                <% group.posts.forEach(function(p){ %>
+                                <h6 class="item my-1 text-right">
+                                    <a href="<%- url_for(p.path) %>">
+                                        <span class="text-main"><%- p.title %></span>
+                                        <small class="text-muted d-inline-block" style="width: 85px;">[<%- date(p.date, 'MM/DD HH:ss') %>]</small>
+                                    </a>
+                                </h6>
+                                <%}) %>
+                            </div>
+                        </div>
+                        <h3 class="d-inline-block year text-left" style="width: 48%;">
+                            <span class="number pl-5 ml-3"><%- group.year %></span>
+                        </h3>
+                    </div>
+                    <% } %>
+                <% })%>
+                <!-- <% var groups = archives(site.posts) %>
+                <% groups.forEach(function(group,i){ %>
+                    <% if(i%2>0){ %>
+                        <div class="timeline-block d-flex">
+                            <h3 class="flex-shrink-0 text-right h-100 align-self-center year">
+                                <span class="number"><%- group.year %></span>
+                            </h3>
+                            <div class="flex-grow-1 left">
+                                <div class="marker"></div>
+                                <div class="content d-flex justify-content-center flex-column pl-4">
+                                    <% group.posts.forEach(function(p){ %>
+                                    <h6 class="item my-1">
+                                        <a href="<%- url_for(p.path) %>">
+                                            <small class="text-muted d-inline-block" style="width: 85px;">[<%- date(p.date, 'MM/DD HH:ss') %>]</small>
+                                            <span class="text-main"><%- p.title %></span>
+                                        </a>
+                                    </h6>
+                                    <%}) %>
+                                </div>
+                            </div>
+                        </div>
+                    <% } else {%>
+                        <div class="timeline-block d-flex">
+                            <div class="flex-grow-1 left">
+                                <div class="content-left d-flex justify-content-center flex-column pr-4">
+                                    <% group.posts.forEach(function(p){ %>
+                                    <h6 class="item my-1 text-right">
+                                        <a href="<%- url_for(p.path) %>">
+                                            <span class="text-main"><%- p.title %></span>
+                                            <small class="text-muted d-inline-block" style="width: 85px;">[<%- date(p.date, 'MM/DD HH:ss') %>]</small>
+                                        </a>
+                                    </h6>
+                                    <%}) %>
+                                </div>
+                                <div class="marker-left"></div>
+                            </div>
+                            <h3 class="flex-shrink-0 text-right h-100 align-self-center year">
+                                <span class="number"><%- group.year %></span>
+                            </h3>
+                        </div>
+                    <% } %>
                 <%}) %>
-            </div>
+            </div> -->
         </div>
         <div class="mt-3">
             <%- partial('_partial/footer') %>

@@ -1,5 +1,11 @@
 @charset "UTF-8";
 /** bootstrap **/
+.page-index {
+  border-left: 1px solid rgba(68, 68, 68, 0.1);
+  font-size: 1rem;
+  position: sticky;
+  top: 120px;
+}
 .page-index ul,
 .page-index ol,
 .page-index dl {
@@ -10,18 +16,14 @@
 .page-index ul li,
 .page-index ol li,
 .page-index dl li {
-  margin: 20px 30px;
+  margin-left: 20px;
+  line-height: 40px;
 }
 .page-index a {
   color: #444;
 }
-.page-index .overlay {
-  background-color: white;
-}
-
 .article {
   font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
-  background-color: white;
 }
 .article .article-preview {
   position: relative;
@@ -46,11 +48,14 @@
 .article .article-content h4 {
   margin-top: 30px;
   margin-bottom: 30px;
-  color: black;
+  color: #444;
   font-weight: 600;
 }
 .article .article-content h1 {
   font-size: 25px;
+  border-left: 5px solid rgba(68, 68, 68, 0.1);
+  padding-left: 5px;
+  margin-left: -10px;
 }
 .article .article-content h2 {
   font-size: 21px;

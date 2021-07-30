@@ -27,31 +27,35 @@ img {
   Main components 
 
   -------------------------------- */
-.timeline-block .year {
-  width: 15rem;
-}
-.timeline-block .year .number {
-  margin-right: 1rem;
-  padding-bottom: 0.2rem;
-  padding-left: 0.2rem;
-  padding-right: 4rem;
-  border-bottom: 1px dashed rgba(68, 68, 68, 0.5);
-}
-.timeline-block .left {
+.timeline-content {
   position: relative;
 }
-.timeline-block .marker {
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0px;
+  left: 50%;
+  height: 100%;
+  border-right: 1px dashed #444;
+}
+.timeline-content .timeline-block .year .number {
+  padding-bottom: 0.2rem;
+  border-bottom: 1px dashed rgba(68, 68, 68, 0.5);
+}
+.timeline-content .timeline-block .content .marker {
+  opacity: 1;
   position: absolute;
   top: calc(50% - 1rem);
-  left: -1rem;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
   background: #444;
 }
-.timeline-block .content {
-  border-left: 4px dashed #444;
-  margin-left: -2px;
-  min-height: 100px;
+.timeline-content .timeline-block .content .marker-left {
+  left: -1rem;
+}
+.timeline-content .timeline-block .content .marker-right {
+  right: -1rem;
 }

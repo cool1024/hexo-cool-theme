@@ -1,8 +1,10 @@
 @import "colors";
 
 .page-index {
-    // border-left: 2px solid rgba($color, 0.2);
-
+    border-left: 1px solid rgba($color, 0.1);
+    font-size: 1rem;
+    position: sticky;
+    top: 120px;
     ul,
     ol,
     dl {
@@ -11,7 +13,8 @@
         padding: 0;
 
         li {
-            margin: 20px 30px;
+            margin-left: 20px;
+            line-height: 40px;
         }
     }
 
@@ -20,18 +23,19 @@
     }
 
     .overlay {
-        background-color: white;
+        // background-color: white;
     }
 }
 
 .article {
     font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
     // box-shadow: 1px 1px 10px rgba($blue, 0.1);
-    background-color: white;
+    // background-color: white;
 
     .article-preview {
         position: relative;
-        font-family: Roboto, Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei, WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
+        font-family: Roboto, Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", Microsoft JhengHei,
+            WenQuanYi Micro Hei, "Microsoft YaHei", sans-serif;
 
         // &::after {
         //     content: '';
@@ -72,14 +76,15 @@
         h4 {
             margin-top: 30px;
             margin-bottom: 30px;
-            color: black;
+            color: $color;
             font-weight: 600;
         }
 
         h1 {
             font-size: 25px;
-            // border-left: 5px solid rgba($color, 0.5);
-            // padding-left: 10px;
+            border-left: 5px solid rgba($color, 0.1);
+            padding-left: 5px;
+            margin-left: -10px;
         }
 
         h2 {
@@ -173,7 +178,8 @@
                 font-size: 139px;
                 font-weight: 800;
                 font-style: normal;
-                font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun, sans-serif;
+                font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", SimSun,
+                    sans-serif;
                 position: absolute;
                 left: 10px;
                 top: -30px;
@@ -315,7 +321,6 @@
             }
 
             pre {
-
                 .meta,
                 .bash {
                     color: #99cc99;

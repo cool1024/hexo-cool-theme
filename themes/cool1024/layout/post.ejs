@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="/style/post.css">
 </head>
 
-<body style="background-color: #eee;">
+<body class="bg-white">
     <div class="bg-main" style="height:3px;"></div>
     <div class="container p-0">
         <%- partial('_partial/static-nav') %>
         <div class="row mt-4">
             <div class="col-xl-9 col-lg-8 col-12">
-                <div class="article p-4 shadow-sm">
+                <div class="article p-4 bg-light">
                     <div class="article-title">
                         <h1 class="d-flex align-items-center m-0">
                             <div class="mr-2" style="font-size: 25px;"><%- page.title %></div>
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="col-xl-3 col-lg-4 col-12">
-                <div class="page-index shadow-sm">
+                <div class="page-index">
                     <div class="overlay py-1">
                         <%- toc(page.content) %>
                     </div>
