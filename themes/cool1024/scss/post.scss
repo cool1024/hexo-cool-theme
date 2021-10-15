@@ -82,7 +82,7 @@
 
         h1 {
             font-size: 25px;
-            border-left: 5px solid rgba($color, 0.1);
+            border-left: 5px solid rgba($color, 0.5);
             padding-left: 5px;
             margin-left: -10px;
         }
@@ -205,7 +205,8 @@
         // 下面是代码高亮相关
 
         .highlight {
-            background-color: $color;
+            background-color: rgba($color, 0.9);
+            border: 1px solid $color;
             padding: 15px;
             overflow: auto;
 
